@@ -1,13 +1,14 @@
 package br.ifrn.tads.poo.biblioteca.acervo;
 
-public class Texto extends ItemAcervo{
-	private String titulo;
-	
+public class Texto {
+	private String autor;
 
-	
-	
-	/***
-	 * poderia ter um tostring pra o usuario ver mostrar esses dadod no escolheriten do acervo
-	 */
+	public Texto(String autor){	
+		this.autor = autor;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
 	
 }

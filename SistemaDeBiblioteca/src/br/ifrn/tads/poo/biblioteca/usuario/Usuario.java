@@ -1,15 +1,24 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
-/**
- * 
- * classe model
- *
- */
+
 public class Usuario {
 	protected int codUsuario;
 	protected String nome;
 	protected String endereco;
 	protected String cpf;
 	
+	
+	//adicionando usuarios
+	public Usuario( int codUsuario, String nome, String endereco, String cpf){
+		this.codUsuario = codUsuario;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.cpf = cpf;
+	}
+	
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getCodUsuario() {
 		return codUsuario;
 	}
@@ -34,4 +43,5 @@ public class Usuario {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+	
 }

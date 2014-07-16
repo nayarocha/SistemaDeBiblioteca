@@ -1,5 +1,5 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
 
-public class Administrator extends Usuario{
-	
+public class Administrator {
+
 }
