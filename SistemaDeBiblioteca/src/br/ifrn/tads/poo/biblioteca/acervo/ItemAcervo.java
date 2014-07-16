@@ -1,6 +1,9 @@
 package br.ifrn.tads.poo.biblioteca.acervo;
 import java.util.Date;
-
+				/**										**\
+				 * 
+ 				* *******	classe model	*************
+	 			\**           							**/	
 import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public abstract class ItemAcervo {
 	private double custo;		//isso eh a MULTA?????
@@ -59,7 +62,7 @@ public abstract class ItemAcervo {
 	 * quando reservados
 	 * quando fora da biblioteca
 	 * 
-	 * podem ser interfaces???
+	 * podem ser INTERFACES???
 	 * 
 	 */
 	

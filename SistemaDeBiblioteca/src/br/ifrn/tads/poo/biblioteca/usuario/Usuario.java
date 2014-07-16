@@ -1,5 +1,9 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
-
+/**
+ * 
+ * classe model
+ *
+ */
 public class Usuario {
 	protected int codUsuario;
 	protected String nome;
