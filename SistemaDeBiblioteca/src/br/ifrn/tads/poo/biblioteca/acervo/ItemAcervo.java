@@ -4,12 +4,12 @@ import java.util.Date;
 
 
 public abstract class ItemAcervo {
-	private double custo;	//isso eh a MULTA?????
-	private Date dataAluguel = null;	//setados no aluguel
-	private Date dataDevolucao = null;
-	private int codigoItem;// no uml eh da classe Iten identificador unico do iten de acervo
-	private boolean pago = true;
-	private static int contador=0;// refere-se a qtidade de itens inseridoa no acervo
+	protected double custo;	//isso eh a MULTA?????
+	protected Date dataAluguel = null;	//setados no aluguel
+	protected Date dataDevolucao = null;
+	protected int codigoItem;// no uml eh da classe Iten identificador unico do iten de acervo
+	protected boolean pago = true;
+	protected static int contador=0;// refere-se a qtidade de itens inseridoa no acervo
 
 	
 	protected ItemAcervo(double custo){

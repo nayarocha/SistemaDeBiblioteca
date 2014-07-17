@@ -7,7 +7,7 @@ public class Livro extends ItemAcervo {
 	private int edicao;//no UML EH integer
 	private int quantidade = 0;
 
-	
+	//acho q o problema daqui eh q o construtor num ta coerente com a classe pai
 	public Livro(String titulo, String autor, String isbn, int edicao){
 		this.titulo = titulo;
 		this.autor = autor;
@@ -15,8 +15,16 @@ public class Livro extends ItemAcervo {
 		this.edicao = edicao;
 		this.quantidade++;
 		
-		
 	}
+
+	/*public Livro(String titulo, String autor, String isbn, int edicao){
+		this.titulo = titulo;
+		this.autor = autor;
+		this.isbn = isbn;
+		this.edicao = edicao;
+		this.quantidade++;
+		
+	}*/
 
 
 	public String getTitulo() {
