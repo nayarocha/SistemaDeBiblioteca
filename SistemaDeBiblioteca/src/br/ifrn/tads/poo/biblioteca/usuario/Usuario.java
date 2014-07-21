@@ -1,5 +1,7 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
 
+
+
 public class Usuario {
 	protected int codUsuario;
 	protected String nome;
@@ -17,6 +19,28 @@ public class Usuario {
 	
 	public Usuario() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	/*public boolean temEsseRefri(Refrigerante nome) {
+		for (int i = 0; i < refrigerantes.length; i++) {
+			if (refrigerantes[i]!= null && nome.getNomeRefrigerante() == refrigerantes[i].getNomeRefrigerante()){
+				return true;
+			}
+		}
+		
+		return false;
+	}*/
+
+	
+	public ItemAcervo escolherItemAcervo(String titulo){
+		
+		for (int i = 0; i < usuarios.length; i++) {
+			
+		}
+		
+		
+		
+		
 	}
 
 	public int getCodUsuario() {

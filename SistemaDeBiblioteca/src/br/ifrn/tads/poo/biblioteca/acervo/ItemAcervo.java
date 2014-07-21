@@ -12,12 +12,12 @@ public abstract class ItemAcervo {
 	protected static int contador=0;// refere-se a qtidade de itens inseridoa no acervo
 
 	
-	protected ItemAcervo(double custo){
-		this.custo = custo;
+	protected ItemAcervo(){
+		this.custo = 0.0;
 		//altera a qtidade de itens no acervo
-		this.contador ++;	
+		contador ++;	
 		//gera codigo do item adicionado 
-		this.codigoItem = this.contador;
+		this.codigoItem = contador;
 	}
 	
 	public void gerarAcervo(){
@@ -57,6 +57,13 @@ public abstract class ItemAcervo {
 	public int getCodigoItem() {
 	return codigoItem;
 	}
+	
+	
+	public double getCusto() {
+		// TODO Auto-generated method stub
+		return custo;
+	}
+	
 
 	 /***inutil criar um item de acervo sem tipo
 ***** necessarios tipos apostila livro e texto

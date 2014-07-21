@@ -1,32 +1,24 @@
 package br.ifrn.tads.poo.biblioteca.acervo;
 
 public class Livro extends ItemAcervo {
+	
 	private String titulo;
 	private String autor;
 	private String isbn;
 	private int edicao;//no UML EH integer
 	private int quantidade = 0;
 
-	//acho q o problema daqui eh q o construtor num ta coerente com a classe pai
-	public Livro(String titulo, String autor, String isbn, int edicao){
+	
+	public Livro(String titulo, String autor, String isbn, int edicao, double custo){
 		this.titulo = titulo;
 		this.autor = autor;
 		this.isbn = isbn;
 		this.edicao = edicao;
-		this.quantidade++;
-		
+		super.custo = custo;
+		this.quantidade++;	
 	}
 
-	/*public Livro(String titulo, String autor, String isbn, int edicao){
-		this.titulo = titulo;
-		this.autor = autor;
-		this.isbn = isbn;
-		this.edicao = edicao;
-		this.quantidade++;
-		
-	}*/
-
-
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -50,6 +42,8 @@ public class Livro extends ItemAcervo {
 	public int getQuantidade() {
 		return quantidade;
 	}
+
+
 	
 	
 	
