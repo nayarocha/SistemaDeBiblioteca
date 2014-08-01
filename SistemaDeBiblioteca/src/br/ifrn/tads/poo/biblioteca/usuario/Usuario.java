@@ -32,16 +32,16 @@ public class Usuario {
 	}*/
 
 	
-	public ItemAcervo escolherItemAcervo(String titulo){
+	/*public ItemAcervo escolherItemAcervo(String titulo){
 		
 		for (int i = 0; i < usuarios.length; i++) {
 			
-		}
+		}*/
 		
 		
 		
 		
-	}
+	
 
 	public int getCodUsuario() {
 		return codUsuario;
