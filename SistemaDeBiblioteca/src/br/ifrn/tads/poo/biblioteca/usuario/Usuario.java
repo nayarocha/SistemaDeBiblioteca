@@ -1,5 +1,5 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
-
+import java.util.Random;
 
 
 public class Usuario {
@@ -10,7 +10,7 @@ public class Usuario {
 	
 	
 	//adicionando usuarios
-	public Usuario( int codUsuario, String nome, String endereco, String cpf){
+	public Usuario(int codUsuario,String nome, String endereco, String cpf){
 		this.codUsuario = codUsuario;
 		this.nome = nome;
 		this.endereco = endereco;
@@ -20,6 +20,7 @@ public class Usuario {
 	public Usuario() {
 		// TODO Auto-generated constructor stub
 	}
+	
 	
 	/*public boolean temEsseRefri(Refrigerante nome) {
 		for (int i = 0; i < refrigerantes.length; i++) {

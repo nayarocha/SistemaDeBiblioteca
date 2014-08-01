@@ -1,5 +1,6 @@
 package br.ifrn.tads.poo.biblioteca.app;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import br.ifrn.tads.poo.biblioteca.Biblioteca;
@@ -9,52 +10,59 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 
 
 public class SistemaBiblioteca {
+	//criando biblioteca
 	static Biblioteca biblioteca = new Biblioteca();
-	public static void addUsuario(){
-		//ler código 
-		System.out.println("CÓDIGO");
-		Scanner cod1 = new Scanner(System.in);
-		int cod = cod1.nextInt();
+	private static Scanner nome1;
+	private static Scanner endereco1;
+	private static Scanner cpf1;
+	
+	//Cadastrar usuários
+	public static void addUsuario(){	
 		//ler nome
 		System.out.println("NOME COMPLETO: ");
-		Scanner nome1 = new Scanner(System.in);
-		String nome = nome1.nextLine();
+		nome1 = new Scanner(System.in);
+		String nome = nome1.nextLine();	
 		//ler endereco 
 		System.out.println("ENDEREÇO:");
-		Scanner endereco1 = new Scanner(System.in);
+		endereco1 = new Scanner(System.in);
 		String endereco = endereco1.nextLine();
 		//ler cpf
-		System.out.println("CPF:  ");
-		Scanner cpf1 = new Scanner(System.in);
+		System.out.println("CPF:  ");	
+		cpf1 = new Scanner(System.in);
 		String cpf = cpf1.nextLine();
+		//Gerador de código automático para cada novo usuário
+		Random geraCod = new Random();		
+		int codUsuario = geraCod.nextInt(1000)*2; 	
+		
 		//cria um novo usuário
-		Usuario novoUsuario = new Usuario( cod, nome, endereco,cpf);
+		Usuario novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
 		//Insere o novo usuario no arraylist
 		biblioteca.cadastraUsuario(novoUsuario);
+		
+		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
 	}
 	
 	public static void main(String[] args) {
 		
 		Menu menu = new Menu();
-		
-		menu.menuPrincipal();
-		
+		Scanner lerOpcao = new Scanner(System.in);
+		int opcao;
 		int fim = -1;
+		
 		do{
-			int opcao = 0;
-			Scanner lerOpcao = new Scanner(System.in);
+			menu.menuPrincipal();
 			opcao = lerOpcao.nextInt();
 			switch(opcao){
 			
 			//Cadastrar usuario
 			case 1:
 				addUsuario();
-				menu.menuPrincipal();
+				
 			break;
 			
 			
 			}
-			fim = 0;
+			
 			
 		}while(fim != 0);
 		

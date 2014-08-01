@@ -26,7 +26,7 @@ public class Biblioteca {
 	public void cadastraUsuario(Usuario usuario){
 		usuarios.add(usuario);
 		System.out.println("Usuario cadastrado");
-		System.out.println("USUARIOS CADASTRADOS" +usuarios.size());
+		System.out.println("USUARIOS CADASTRADOS :" +usuarios.size());
 	}
 	
 	
