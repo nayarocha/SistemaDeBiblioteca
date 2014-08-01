@@ -1,19 +1,14 @@
 package br.ifrn.tads.poo.biblioteca;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 
-import br.ifrn.tads.poo.biblioteca.*;
-import br.ifrn.tads.poo.biblioteca.acervo.*;
+import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 
 public class Biblioteca {
 	private String nomeBiblioteca;	
-	
-	//private Usuario usuario;
-	// ItemAcervo itemAcervo;
-	
 	private ItemAcervo acervoBiblioteca[] = new ItemAcervo[50];
-	//private Usuario usuarios[] = new Usuario[10];
 	private int quantUsuarios;
 	private int quantItens;
 	
@@ -23,29 +18,22 @@ public class Biblioteca {
 
 	}
 	
+	//Cadastra Usuário
 	public void cadastraUsuario(Usuario usuario){
 		usuarios.add(usuario);
 		System.out.println("Usuario cadastrado");
 		System.out.println("USUARIOS CADASTRADOS :" +usuarios.size());
 	}
 	
-	
-	
-	
-	/*CADASTRA USUARIOS 
-	public void cadastraUsuario(Usuario usuario){
-		for (int i = 0; i < usuarios.length; i++) {
-			if(usuarios[i]==null){
-				usuarios[i] = usuario;
-				
-			}
-			
-		}
-		quantUsuarios++;
-		System.out.println("Usuario cadastrado");
-		System.out.println("Quantidade de usuarios cadastrados:" +quantUsuarios);
-	}*/
-	
+	//Lista usuarios cadastrados
+	public void listaUsuarios(){
+		// Imprime os objetos que esta no arraylist.Para isso foi necessário
+		//sobrescrever o método toString na classe usuario
+		System.out.println("||Usuários cadastrados no sistema||");
+		for(Usuario u: usuarios){
+			System.out.println(u);
+		}		
+	}	
 	
 	//CADASTRAR LIVROS
 	public void cadastraItens(ItemAcervo itemacervo){

@@ -60,6 +60,11 @@ public class SistemaBiblioteca {
 				
 			break;
 			
+			//listar usuários cadastrados
+			case 2:
+				biblioteca.listaUsuarios();
+			break;
+			
 			
 			}
 			

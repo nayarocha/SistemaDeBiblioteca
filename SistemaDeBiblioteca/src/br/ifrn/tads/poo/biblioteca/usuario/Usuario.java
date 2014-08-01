@@ -22,28 +22,12 @@ public class Usuario {
 	}
 	
 	
-	/*public boolean temEsseRefri(Refrigerante nome) {
-		for (int i = 0; i < refrigerantes.length; i++) {
-			if (refrigerantes[i]!= null && nome.getNomeRefrigerante() == refrigerantes[i].getNomeRefrigerante()){
-				return true;
-			}
-		}
-		
-		return false;
-	}*/
-
+	@Override
+	public String toString() {
+		return this.codUsuario + " | " + this.nome +  " | ";
+	}
 	
-	/*public ItemAcervo escolherItemAcervo(String titulo){
-		
-		for (int i = 0; i < usuarios.length; i++) {
-			
-		}*/
-		
-		
-		
-		
 	
-
 	public int getCodUsuario() {
 		return codUsuario;
 	}
