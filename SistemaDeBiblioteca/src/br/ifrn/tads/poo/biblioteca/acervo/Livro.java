@@ -9,7 +9,7 @@ public class Livro extends ItemAcervo {
 	private int quantidade = 0;
 
 	
-	public Livro(String titulo, String autor, String isbn, int edicao, double custo){
+	public Livro(String titulo, String autor, String isbn, int edicao){
 		this.titulo = titulo;
 		this.autor = autor;
 		this.isbn = isbn;

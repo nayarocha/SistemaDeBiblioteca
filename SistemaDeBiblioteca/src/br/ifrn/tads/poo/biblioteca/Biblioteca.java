@@ -8,11 +8,11 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 
 public class Biblioteca {
 	private String nomeBiblioteca;	
-	private ItemAcervo acervoBiblioteca[] = new ItemAcervo[50];
 	private int quantUsuarios;
 	private int quantItens;
 	
 	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
+	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
 	
 	public Biblioteca(){
 
@@ -35,27 +35,12 @@ public class Biblioteca {
 		}		
 	}	
 	
-	//CADASTRAR LIVROS
-	public void cadastraItens(ItemAcervo itemacervo){
-		for (int i = 0; i < acervoBiblioteca.length; i++) {
-			if(acervoBiblioteca[i]==null){
-				acervoBiblioteca[i] = itemacervo;
-				
-			}
-			
-		}
-		quantItens++;
-		System.out.println("Item  cadastrado");
-		System.out.println("Quantidade de itens cadastrados:" +quantItens);
+	//Cadastra item no acervo
+	public void cadastraItem(ItemAcervo item){
+		itemDeAcervo.add(item);	
+		System.out.println("Item cadastrado com sucesso!");
 	}
 	
-	
-	//GERANDO ACERVO	
-	public void gerarAcervo(){
-		for (int i = 0; i < acervoBiblioteca.length; i++) {
-			
-		}
-	}
 	
 	
 	
