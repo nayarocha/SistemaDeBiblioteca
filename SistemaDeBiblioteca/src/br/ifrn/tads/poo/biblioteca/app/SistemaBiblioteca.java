@@ -75,11 +75,11 @@ public class SistemaBiblioteca {
 		}while(fim2 != 0);
 	}
 
-	//Cadastrar usuários
-	private static Scanner nome1;
-	private static Scanner endereco1;
-	private static Scanner cpf1;
-	
+		//Cadastrar usuários
+		private static Scanner nome1;
+		private static Scanner endereco1;
+		private static Scanner cpf1;
+		
 		public static void addUsuario(){	
 			
 			//ler nome

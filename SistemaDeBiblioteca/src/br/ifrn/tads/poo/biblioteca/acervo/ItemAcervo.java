@@ -20,10 +20,6 @@ public abstract class ItemAcervo {
 		this.codigoItem = contador;
 	}
 	
-	public void gerarAcervo(){
-		
-	}
-	
 	
 	public void alugar(){
 	/**
@@ -65,6 +61,10 @@ public abstract class ItemAcervo {
 	}
 	
 
+	public void gerarAcervo(){
+		
+	}
+	
 	 /***inutil criar um item de acervo sem tipo
 ***** necessarios tipos apostila livro e texto
 */

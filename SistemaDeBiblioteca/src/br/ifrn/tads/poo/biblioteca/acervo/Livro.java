@@ -14,8 +14,8 @@ public class Livro extends ItemAcervo {
 		this.autor = autor;
 		this.isbn = isbn;
 		this.edicao = edicao;
-		super.custo = custo;
-		this.quantidade++;	
+		this.quantidade++;
+		
 	}
 
 	
