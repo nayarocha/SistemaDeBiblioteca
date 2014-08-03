@@ -41,6 +41,14 @@ public class Biblioteca {
 		System.out.println("Item cadastrado com sucesso!");
 	}
 	
+	//Lista itens cadastrados no acervo
+	public void listaItemAcervo(){
+		System.out.println("===== ITENS CADASTRADOS NO SISTEMA =====");
+		for(ItemAcervo i: itemDeAcervo){
+			System.out.println(i);
+		}
+	}
+	
 	
 	
 	

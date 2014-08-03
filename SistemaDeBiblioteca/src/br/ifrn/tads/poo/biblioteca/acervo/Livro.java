@@ -5,7 +5,7 @@ public class Livro extends ItemAcervo {
 	private String titulo;
 	private String autor;
 	private String isbn;
-	private int edicao;//no UML EH integer
+	private int edicao;
 	private int quantidade = 0;
 
 	
@@ -16,6 +16,12 @@ public class Livro extends ItemAcervo {
 		this.edicao = edicao;
 		this.quantidade++;
 		
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "LIVRO - " + this.titulo;
 	}
 
 	

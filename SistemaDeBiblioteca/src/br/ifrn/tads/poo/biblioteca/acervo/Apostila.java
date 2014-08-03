@@ -11,6 +11,12 @@ public class Apostila extends ItemAcervo{
 		super.custo = custo;
 		this.quantidade++;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "APOSTILA - " + this.titulo;
+	}
 
 	public String getTitulo() {
 		return titulo;

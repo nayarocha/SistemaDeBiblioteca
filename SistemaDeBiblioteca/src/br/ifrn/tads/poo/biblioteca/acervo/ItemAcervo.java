@@ -21,6 +21,7 @@ public abstract class ItemAcervo {
 	}
 	
 	
+	
 	public void alugar(){
 	/**
 	* sai do array do acervo

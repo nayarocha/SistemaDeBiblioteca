@@ -12,4 +12,10 @@ public class Texto extends ItemAcervo {
 		return autor;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "APOSTILA - " + this.autor;
+	}
+	
 }
