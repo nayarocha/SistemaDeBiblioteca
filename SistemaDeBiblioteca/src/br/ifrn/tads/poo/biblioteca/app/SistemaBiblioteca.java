@@ -10,20 +10,17 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public class SistemaBiblioteca {
 	//criando biblioteca
 	static Biblioteca biblioteca = new Biblioteca();
-	private static Scanner nome1;
-	private static Scanner endereco1;
-	private static Scanner cpf1;
 	
 	
 	public static void main(String[] args) {
 		
-		Menu menu = new Menu();
+		
 		Scanner lerOpcao = new Scanner(System.in);
 		int opcao;
 		int fim = -1;
 		
 		do{
-			menu.menuPrincipal();
+			Menu.menuPrincipal();
 			opcao = lerOpcao.nextInt();
 			switch(opcao){
 			
@@ -49,12 +46,42 @@ public class SistemaBiblioteca {
 	}
 
 	private static void addItenAcervo() {
-		// TODO Auto-generated method stub
+		Scanner lerOpcao2 = new Scanner(System.in);
+		int opcao2;
+		int fim2 = -1;
 		
+		do{
+			Menu.menuItensAcervo();
+			opcao2 = lerOpcao2.nextInt();
+			switch(opcao2){
+			
+			//LIVRO
+			case 1:
+//				ADICIONAR LIVRO
+			break;
+			
+//			APOSTILA
+			case 2:
+//				ADICIONAR APOSTILA
+			break;
+			
+			//TEXTO
+			case 3:
+//				ADICIONAR TEXTO
+			break;
+			}
+			
+			
+		}while(fim2 != 0);
 	}
 
 	//Cadastrar usuários
+	private static Scanner nome1;
+	private static Scanner endereco1;
+	private static Scanner cpf1;
+	
 		public static void addUsuario(){	
+			
 			//ler nome
 			System.out.println("NOME COMPLETO: ");
 			nome1 = new Scanner(System.in);
