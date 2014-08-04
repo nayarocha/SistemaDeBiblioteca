@@ -9,7 +9,8 @@ public class Livro extends ItemAcervo {
 	private int quantidade = 0;
 
 	
-	public Livro(String titulo, String autor, String isbn, int edicao){
+	public Livro(int codItem,String titulo, String autor, String isbn, int edicao){
+		super.codigoItem =  codItem;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.isbn = isbn;
@@ -21,7 +22,7 @@ public class Livro extends ItemAcervo {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "LIVRO - " + this.titulo;
+		return  "CODIGO - "+ this.codigoItem;  //+ "LIVRO - " + this.titulo;
 	}
 
 	

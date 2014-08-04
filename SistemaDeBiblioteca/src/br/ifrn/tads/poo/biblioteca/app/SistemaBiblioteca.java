@@ -19,7 +19,7 @@ public class SistemaBiblioteca {
 		private static Scanner endereco1;
 		private static Scanner cpf1;
 		private static Scanner cod1;
-		
+		private static Usuario novoUsuario;
 		//CADASTRAR USUARIOS
 		public static void addUsuario(){				
 			//ler nome
@@ -39,7 +39,7 @@ public class SistemaBiblioteca {
 			int codUsuario = geraCod.nextInt(1000)*2; 	
 				
 			//cria um novo usuário
-			Usuario novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
+			 novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
 			//Insere o novo usuario no arraylist
 			biblioteca.cadastraUsuario(novoUsuario);
 				
@@ -50,7 +50,7 @@ public class SistemaBiblioteca {
 		public static void addItemLivro(){
 			System.out.println("||Cadastrando livro no sistema||");
 			
-			 System.out.println("Código");
+			 System.out.println("Código item:");
 			 cod1 = new Scanner(System.in);
 			 int cod = cod1.nextInt();
 			
@@ -71,7 +71,7 @@ public class SistemaBiblioteca {
 			 int edicao = edicao1.nextInt();
 			
 			 //Cria um novo item no acervo
-			 ItemAcervo livro = new Livro(title,autor,isbn,edicao); 
+			 ItemAcervo livro = new Livro(cod,title,autor,isbn,edicao); 
 			
 			 //Insere novo item no arraylist
 			 biblioteca.cadastraItem(livro);
@@ -81,6 +81,10 @@ public class SistemaBiblioteca {
 		public static void addItemApostila(){
 			System.out.println("||Cadastrando apostila no sistema||");
 						
+			System.out.println("Código item:");
+			cod1 = new Scanner(System.in);
+			int cod = cod1.nextInt();
+			
 			System.out.println("TÍTULO");
 			Scanner a = new Scanner(System.in);
 			String title = a.nextLine();				
@@ -90,7 +94,7 @@ public class SistemaBiblioteca {
 			String autor = b.nextLine();
 						
 			//Cria um novo item no acervo
-			ItemAcervo apostila = new Apostila(title,autor); 
+			ItemAcervo apostila = new Apostila(cod,title,autor); 
 						
 			//Insere novo item no arraylist
 			biblioteca.cadastraItem(apostila);
@@ -99,13 +103,17 @@ public class SistemaBiblioteca {
 		//ADICIONAR TEXTO NO ACERVO
 		public static void addItemTexto(){
 			System.out.println("||Cadastrando TEXTO no sistema||");
-																
+			 
+			System.out.println("Código item:");
+			cod1 = new Scanner(System.in);
+			int cod = cod1.nextInt();
+			
 			System.out.println("AUTOR");
 			Scanner b = new Scanner(System.in);
 			String autor = b.nextLine();
 									
 			//Cria um novo item no acervo
-			ItemAcervo texto = new Texto(autor); 
+			ItemAcervo texto = new Texto(cod,autor); 
 									
 			//Insere novo item no arraylist
 			biblioteca.cadastraItem(texto);
@@ -140,6 +148,24 @@ public class SistemaBiblioteca {
 			
 			case 4:
 				biblioteca.listaItemAcervo();
+			break;
+			
+			case 5:
+				System.out.println("Insira o código do item");
+				Scanner ler = new Scanner(System.in);
+				int escolha = ler.nextInt();
+				biblioteca.escolherItemAcervo(escolha);
+				
+			break;
+			
+			case 6:
+				System.out.println("Insira  cod do usuario");
+				Scanner a = new Scanner(System.in);
+				String usuario = a.nextLine();
+				String escolhaNew = Integer.toString(escolha);
+				
+				
+				biblioteca.cadastraEmprestimo(usuario, escolhaNew);
 			break;
 			
 			}

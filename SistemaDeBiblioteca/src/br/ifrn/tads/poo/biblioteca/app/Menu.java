@@ -8,6 +8,8 @@ public  class  Menu  {
 		System.out.println("[2] -LISTAR USUÁRIOS CADASTRADOS");
 		System.out.println("[3] -CADASTRAR ITEM NO SISTEMA");
 		System.out.println("[4] -LISTAR ITENS CADASTRADOS NO SISTEMA");
+		System.out.println("-----------------------------------------");
+		System.out.println("[5] -ESCOLHER ITEM PARA ALUGAR");
 	}
 	
 	public static void menuItensAcervo(){

@@ -5,7 +5,8 @@ public class Apostila extends ItemAcervo{
 	private String autor;
 	private int quantidade = 0;
 
-	public Apostila(String titulo, String autor) {
+	public Apostila(int cod,String titulo, String autor) {
+		super.codigoItem = cod;
 		this.titulo = titulo;
 		this.autor = autor;
 		super.custo = custo;
@@ -15,7 +16,7 @@ public class Apostila extends ItemAcervo{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "APOSTILA - " + this.titulo;
+		return "CÓDIGO: " + super.codigoItem + "TÍTULO: " + this.titulo;
 	}
 
 	public String getTitulo() {

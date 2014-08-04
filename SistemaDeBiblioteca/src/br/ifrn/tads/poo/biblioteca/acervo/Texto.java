@@ -3,7 +3,8 @@ package br.ifrn.tads.poo.biblioteca.acervo;
 public class Texto extends ItemAcervo {
 	private String autor;
 
-	public Texto(String autor){	
+	public Texto(int cod,String autor){	
+		super.codigoItem = cod;
 		this.autor = autor;
 		super.custo = custo;
 	}
@@ -15,7 +16,8 @@ public class Texto extends ItemAcervo {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "APOSTILA - " + this.autor;
+		return "CÓDIGO: " + super.codigoItem + "APOSTILA -" + this.autor;
+		
 	}
 	
 }

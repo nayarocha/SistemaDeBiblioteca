@@ -1,6 +1,9 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
 import java.util.Random;
 
+import br.ifrn.tads.poo.biblioteca.Biblioteca;
+import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
+
 
 public class Usuario {
 	protected int codUsuario;
@@ -17,9 +20,7 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 	
-	public Usuario() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	
 	@Override
