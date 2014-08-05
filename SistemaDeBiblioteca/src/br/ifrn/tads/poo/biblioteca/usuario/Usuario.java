@@ -1,8 +1,4 @@
 package br.ifrn.tads.poo.biblioteca.usuario;
-import java.util.Random;
-
-import br.ifrn.tads.poo.biblioteca.Biblioteca;
-import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 
 
 public class Usuario {

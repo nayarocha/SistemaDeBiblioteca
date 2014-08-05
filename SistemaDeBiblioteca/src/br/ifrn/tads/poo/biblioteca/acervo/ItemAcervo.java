@@ -4,7 +4,7 @@ import java.util.Date;
 
 
 public abstract class ItemAcervo {
-	protected double custo;	//isso eh a MULTA?????
+	protected double custo = 0.0;	//isso eh a MULTA?????
 	protected Date dataAluguel = null;	//setados no aluguel
 	protected Date dataDevolucao = null;
 	protected int codigoItem;// no uml eh da classe Iten identificador unico do iten de acervo

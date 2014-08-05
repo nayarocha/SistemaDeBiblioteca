@@ -6,6 +6,7 @@ public class Apostila extends ItemAcervo{
 	private int quantidade = 0;
 
 	public Apostila(int cod,String titulo, String autor) {
+		
 		super.codigoItem = cod;
 		this.titulo = titulo;
 		this.autor = autor;

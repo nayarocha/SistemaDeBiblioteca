@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import br.ifrn.tads.poo.biblioteca.Biblioteca;
+import br.ifrn.tads.poo.biblioteca.CodigoInvalidoException;
 import br.ifrn.tads.poo.biblioteca.acervo.Apostila;
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.acervo.Livro;
@@ -20,6 +21,10 @@ public class SistemaBiblioteca {
 		private static Scanner cpf1;
 		private static Scanner cod1;
 		private static Usuario novoUsuario;
+		private static int escolha;
+
+
+		
 		//CADASTRAR USUARIOS
 		public static void addUsuario(){				
 			//ler nome
@@ -151,19 +156,25 @@ public class SistemaBiblioteca {
 			break;
 			
 			case 5:
-				System.out.println("Insira o código do item");
-				Scanner ler = new Scanner(System.in);
-				int escolha = ler.nextInt();
-				biblioteca.escolherItemAcervo(escolha);
-				
+				ItemAcervo escolhido = null;
+				while(escolhido == null){
+					try{
+							System.out.println("Insira o código do item");
+							Scanner ler = new Scanner(System.in);
+							escolha = ler.nextInt();
+							//atribuí o retorno desse metodo a escolhido
+							escolhido = biblioteca.escolherItemAcervo(escolha);
+						}catch(CodigoInvalidoException e){
+							System.out.println(e.getMessage());
+						}
+				}
 			break;
 			
 			case 6:
 				System.out.println("Insira  cod do usuario");
 				Scanner a = new Scanner(System.in);
 				String usuario = a.nextLine();
-				String escolhaNew = Integer.toString(escolha);
-				
+				String escolhaNew = "" + escolha; //num eh q funciona??
 				
 				biblioteca.cadastraEmprestimo(usuario, escolhaNew);
 			break;

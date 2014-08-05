@@ -64,7 +64,7 @@ public class Biblioteca {
 	}
 	
 
-	public ItemAcervo escolherItemAcervo(int num){
+	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
 		ItemAcervo escolha = null;
 		for(ItemAcervo i: itemDeAcervo){
 			if(i.getCodigoItem() == num){
@@ -72,6 +72,8 @@ public class Biblioteca {
 				System.out.println("Item escolhido:" + i.getCodigoItem());		
 			}
 		}
+		if(escolha == null)
+			throw new CodigoInvalidoException();
 		
 		return escolha;
 	}
