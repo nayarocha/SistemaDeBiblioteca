@@ -8,8 +8,14 @@ public abstract class ItemAcervo {
 	protected Date dataAluguel = null;	//setados no aluguel
 	protected Date dataDevolucao = null;
 	protected int codigoItem;// no uml eh da classe Iten identificador unico do iten de acervo
+	private static int geracodigo = 1000;
 	protected boolean pago = true;
-
+	
+	
+	protected ItemAcervo(){
+		this.codigoItem = geracodigo;
+		this.geracodigo++;
+	}
 
 	public void alugar (ItemAcervo item, Usuario user){
 		String nome = user.getNome();

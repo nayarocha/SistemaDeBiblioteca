@@ -10,8 +10,6 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public class Biblioteca {
 	private String nomeBiblioteca;	
 	
-	
-	
 	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
 	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
 	ArrayList<String> emprestimos = new ArrayList <String>();

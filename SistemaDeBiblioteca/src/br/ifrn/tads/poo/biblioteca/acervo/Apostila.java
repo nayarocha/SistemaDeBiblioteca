@@ -5,9 +5,8 @@ public class Apostila extends ItemAcervo{
 	private String autor;
 	private int quantidade = 0;
 
-	public Apostila(int cod,String titulo, String autor) {
-		
-		super.codigoItem = cod;
+	public Apostila(String titulo, String autor) {
+		super();
 		this.titulo = titulo;
 		this.autor = autor;
 		super.custo = custo;

@@ -3,8 +3,8 @@ package br.ifrn.tads.poo.biblioteca.acervo;
 public class Texto extends ItemAcervo {
 	private String autor;
 
-	public Texto(int cod,String autor){	
-		super.codigoItem = cod;
+	public Texto(String autor){	
+		super();
 		this.autor = autor;
 		super.custo = custo;
 	}

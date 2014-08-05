@@ -9,8 +9,8 @@ public class Livro extends ItemAcervo {
 	private int quantidade = 0;
 
 	
-	public Livro(int codItem,String titulo, String autor, String isbn, int edicao){
-		super.codigoItem =  codItem;
+	public Livro(String titulo, String autor, String isbn, int edicao){
+		super();
 		this.titulo = titulo;
 		this.autor = autor;
 		this.isbn = isbn;
