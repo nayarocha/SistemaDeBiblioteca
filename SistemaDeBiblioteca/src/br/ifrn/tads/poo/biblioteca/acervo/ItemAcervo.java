@@ -12,17 +12,18 @@ public abstract class ItemAcervo {
 	protected boolean pago = true;
 	
 	
+	
 	protected ItemAcervo(){
 		this.codigoItem = geracodigo;
 		this.geracodigo++;
 	}
 
-	public void alugar (ItemAcervo item, Usuario user){
+	/*public static void alugar (ItemAcervo item, Usuario user){
 		String nome = user.getNome();
 		int cod = item.getCodigoItem();
 		String codItem = Integer.toString(cod);
 		
-	}
+	}*/
 
 	public int getCodigoItem() {
 	return codigoItem;

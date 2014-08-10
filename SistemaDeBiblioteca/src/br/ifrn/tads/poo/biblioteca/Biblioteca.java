@@ -12,7 +12,7 @@ public class Biblioteca {
 	
 	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
 	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
-	ArrayList<String> emprestimos = new ArrayList <String>();
+	ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
 	
 	public Biblioteca(){
 
@@ -35,6 +35,27 @@ public class Biblioteca {
 		}		
 	}	
 	
+	public void listaEmprestimos(){
+		// Imprime os objetos que esta no arraylist.Para isso foi necessário
+		//sobrescrever o método toString na classe usuario
+		System.out.println("||Emprestimos||");
+		for(Locacao e: emprestimos){
+			System.out.println(e);
+		}		
+	}	
+	
+	public ArrayList<ItemAcervo> buscaUsuarios(String cpf){
+		// Imprime os objetos que esta no arraylist.Para isso foi necessário
+		//sobrescrever o método toString na classe usuario
+		System.out.println("||buscando|");
+		for(Usuario u: usuarios){
+			if(u.getCpf() == cpf)
+			System.out.println(u.getNome());
+		}	
+		
+		return itemDeAcervo;
+	}	
+	
 	
 	//Cadastra item no acervo
 	public void cadastraItem(ItemAcervo item){
@@ -50,16 +71,16 @@ public class Biblioteca {
 		}
 	}
 	
-	public void cadastraEmprestimo(String usuario, String codAcervo){	
-		emprestimos.add(usuario);
-		emprestimos.add(codAcervo);
+	public void cadastraEmprestimo(Locacao locacao){	
+		emprestimos.add(locacao);
+		System.out.println("Emprestimo feito com sucesso");
 	}
 	
-	public void listaEmprestimos(){
+	/*public void listaEmprestimos(){
 		for(String e: emprestimos){
 			System.out.println(e);
 		}
-	}
+	}*/
 	
 
 	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
@@ -74,6 +95,19 @@ public class Biblioteca {
 			throw new CodigoInvalidoException();
 		
 		return escolha;
+	}
+	
+	public Usuario selecionaUsuario(int cod){
+		Usuario seleciona = null;
+		for(Usuario u: usuarios){
+			if(u.getCodUsuario() == cod){
+				seleciona = u;
+				System.out.println("USUARIO" + u.getCpf());	
+			}
+		}
+		return seleciona;
+		
+		
 	}
 	
 	
