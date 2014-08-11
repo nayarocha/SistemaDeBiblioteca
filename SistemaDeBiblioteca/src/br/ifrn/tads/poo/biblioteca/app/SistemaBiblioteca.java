@@ -1,7 +1,10 @@
 package br.ifrn.tads.poo.biblioteca.app;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -55,6 +58,39 @@ public class SistemaBiblioteca {
 		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
 		salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
 		
+	}
+	
+	public static void addUsuariosDoArquivo(){
+		File arquivo = new File("arquivo_usuarios.txt");
+		try (FileReader freader = new FileReader(arquivo)){
+			BufferedReader br = new BufferedReader(freader);
+				//equanto houver mais linhas
+			while( br.ready() ){
+				//lê a proxima linha
+				String nome = br.readLine();
+				String endereco = br.readLine();
+				String cpf = br.readLine();
+				
+				
+				Random geraCod = new Random();		
+				int codUsuario = geraCod.nextInt(1000)*2; 	
+	
+				//cria um novo usuário
+				novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
+				//Insere o novo usuario no arraylist
+				biblioteca.cadastraUsuario(novoUsuario);
+				System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
+				salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+			
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+				
 	}
 	
 	private static void addItenAcervo() {
@@ -183,7 +219,8 @@ public class SistemaBiblioteca {
 
 			//Cadastrar usuario
 			case 1:
-				addUsuario();
+//				addUsuario();
+				addUsuariosDoArquivo();
 				break;
 
 				//listar usuários cadastrados

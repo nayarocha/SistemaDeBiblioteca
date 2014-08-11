@@ -3,3 +3,29 @@ Novo usuario cadastrado1252 | jose |
 Novo livro cadastradoCODIGO - 1000
 Nova apostila cadastradaCÓDIGO: 1001TÍTULO: java em 10 minutos
 Novo texto adicionado ao acervoCÓDIGO: 1002APOSTILA -tacaca
+Novo usuario cadastrado		314 | ﻿nayara rocha | 
+Novo usuario cadastrado		1354 | nirvana dantas | 
+Novo usuario cadastrado		654 | Issabella | 
+Novo usuario cadastrado		1978 | Issabelly | 
+Novo usuario cadastrado		1696 | Lorena | 
+Novo usuario cadastrado		1248 | Sabrina | 
+Novo usuario cadastrado		244 | Elena | 
+Novo usuario cadastrado		16 | Ana Clara | 
+Novo usuario cadastrado		64 | Eduarda | 
+Novo usuario cadastrado		1598 | Kemilly | 
+Novo usuario cadastrado		860 | Kamilla | 
+Novo usuario cadastrado		1260 | kamilly | 
+Novo usuario cadastrado		718 | Melissa | 
+Novo usuario cadastrado		1658 | Ágatha | 
+Novo usuario cadastrado		1226 | Alice | 
+Novo usuario cadastrado		1476 | Bárbara | 
+Novo usuario cadastrado		46 | Bruna | 
+Novo usuario cadastrado		372 | Cecilia | 
+Novo usuario cadastrado		872 | Carolina | 
+Novo usuario cadastrado		1976 | Érica | 
+Novo usuario cadastrado		430 | Raphael | 
+Novo usuario cadastrado		972 | Danillo | 
+Novo usuario cadastrado		624 | Gustavo | 
+Novo usuario cadastrado		1966 | Kaio | 
+Novo usuario cadastrado		698 | Kaique | 
+Novo usuario cadastrado		1792 | Alexandre | 
