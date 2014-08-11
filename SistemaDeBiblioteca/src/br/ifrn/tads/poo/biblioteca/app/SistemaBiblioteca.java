@@ -125,7 +125,7 @@ public class SistemaBiblioteca {
 	//ADICIONAR LIVRO NO ACERVO
 	public static void addItemLivro(){
 		System.out.println("||Cadastrando livro no sistema||");
-
+		File arquivo = new File("arquivo_livros.txt");
 		System.out.println("Título");
 		Scanner title1 = new Scanner(System.in);
 		String title = title1.nextLine();
@@ -147,6 +147,7 @@ public class SistemaBiblioteca {
 
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(livro);
+		
 		salvarArquivo("Novo livro cadastrado	", livro.toString());
 	}
 
@@ -184,7 +185,38 @@ public class SistemaBiblioteca {
 
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(texto);
+		
+		//atualizar arquivo acervo
 		salvarArquivo("Novo texto adicionado ao acervo	", texto.toString());
+	}
+	
+	public static void criarAcervo(){
+		File arquivo = new File("arquivo_livros.txt");
+		try (FileReader freader = new FileReader(arquivo)){
+			BufferedReader br = new BufferedReader(freader);
+				//equanto houver mais linhas
+			while( br.ready() ){
+				//lê a proxima linha
+				String title = br.readLine();
+				String autor = br.readLine();
+				String isbn = br.readLine();
+				String edicao1 = br.readLine();
+				//Integer.parseInt(); 
+				int edicao = Integer.parseInt(edicao1); 
+				
+				ItemAcervo livro = new Livro(title,autor,isbn,edicao); 
+
+				//Insere novo item no arraylist
+				biblioteca.cadastraItem(livro);				
+				
+				salvarArquivo("Novo livro cadastrado	", livro.toString());
+				
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 	
 	public static void salvarArquivo(String mensagem, String atualizacao) {
@@ -207,7 +239,8 @@ public class SistemaBiblioteca {
 	}
 
 	public static void main(String[] args) {
-
+		addUsuariosDoArquivo();
+		criarAcervo();
 		Scanner lerOpcao = new Scanner(System.in);
 		int opcao;
 		int fim = -1;
@@ -219,8 +252,8 @@ public class SistemaBiblioteca {
 
 			//Cadastrar usuario
 			case 1:
-//				addUsuario();
-				addUsuariosDoArquivo();
+				addUsuario();
+				
 				break;
 
 				//listar usuários cadastrados
@@ -297,6 +330,4 @@ public class SistemaBiblioteca {
 	}
 
 }
-
-
 

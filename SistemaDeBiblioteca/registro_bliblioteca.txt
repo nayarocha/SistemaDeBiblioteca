@@ -29,3 +29,133 @@ Novo usuario cadastrado		624 | Gustavo |
 Novo usuario cadastrado		1966 | Kaio | 
 Novo usuario cadastrado		698 | Kaique | 
 Novo usuario cadastrado		1792 | Alexandre | 
+Novo usuario cadastrado		1722 | ﻿nayara rocha | 
+Novo usuario cadastrado		1046 | nirvana dantas | 
+Novo usuario cadastrado		120 | Issabella | 
+Novo usuario cadastrado		318 | Issabelly | 
+Novo usuario cadastrado		1948 | Lorena | 
+Novo usuario cadastrado		1158 | Sabrina | 
+Novo usuario cadastrado		496 | Elena | 
+Novo usuario cadastrado		1890 | Ana Clara | 
+Novo usuario cadastrado		8 | Eduarda | 
+Novo usuario cadastrado		446 | Kemilly | 
+Novo usuario cadastrado		198 | Kamilla | 
+Novo usuario cadastrado		1122 | kamilly | 
+Novo usuario cadastrado		1306 | Melissa | 
+Novo usuario cadastrado		1014 | Ágatha | 
+Novo usuario cadastrado		1970 | Alice | 
+Novo usuario cadastrado		508 | Bárbara | 
+Novo usuario cadastrado		938 | Bruna | 
+Novo usuario cadastrado		1894 | Cecilia | 
+Novo usuario cadastrado		1792 | Carolina | 
+Novo usuario cadastrado		1758 | Érica | 
+Novo usuario cadastrado		1040 | Raphael | 
+Novo usuario cadastrado		1064 | Danillo | 
+Novo usuario cadastrado		1342 | Gustavo | 
+Novo usuario cadastrado		554 | Kaio | 
+Novo usuario cadastrado		1946 | Kaique | 
+Novo usuario cadastrado		1768 | Alexandre | 
+Novo livro cadastrado	CODIGO - 1000
+Novo usuario cadastrado		132 | ﻿nayara rocha | 
+Novo usuario cadastrado		782 | nirvana dantas | 
+Novo usuario cadastrado		1506 | Issabella | 
+Novo usuario cadastrado		1884 | Issabelly | 
+Novo usuario cadastrado		888 | Lorena | 
+Novo usuario cadastrado		1580 | Sabrina | 
+Novo usuario cadastrado		756 | Elena | 
+Novo usuario cadastrado		812 | Ana Clara | 
+Novo usuario cadastrado		1708 | Eduarda | 
+Novo usuario cadastrado		640 | Kemilly | 
+Novo usuario cadastrado		1874 | Kamilla | 
+Novo usuario cadastrado		844 | kamilly | 
+Novo usuario cadastrado		1570 | Melissa | 
+Novo usuario cadastrado		754 | Ágatha | 
+Novo usuario cadastrado		1424 | Alice | 
+Novo usuario cadastrado		1730 | Bárbara | 
+Novo usuario cadastrado		722 | Bruna | 
+Novo usuario cadastrado		1624 | Cecilia | 
+Novo usuario cadastrado		558 | Carolina | 
+Novo usuario cadastrado		204 | Érica | 
+Novo usuario cadastrado		1834 | Raphael | 
+Novo usuario cadastrado		1146 | Danillo | 
+Novo usuario cadastrado		1190 | Gustavo | 
+Novo usuario cadastrado		1526 | Kaio | 
+Novo usuario cadastrado		1354 | Kaique | 
+Novo usuario cadastrado		1360 | Alexandre | 
+Novo usuario cadastrado		938 | ﻿nayara rocha | 
+Novo usuario cadastrado		1112 | nirvana dantas | 
+Novo usuario cadastrado		898 | Issabella | 
+Novo usuario cadastrado		248 | Issabelly | 
+Novo usuario cadastrado		260 | Lorena | 
+Novo usuario cadastrado		1534 | Sabrina | 
+Novo usuario cadastrado		208 | Elena | 
+Novo usuario cadastrado		1642 | Ana Clara | 
+Novo usuario cadastrado		1774 | Eduarda | 
+Novo usuario cadastrado		1296 | Kemilly | 
+Novo usuario cadastrado		1108 | Kamilla | 
+Novo usuario cadastrado		228 | kamilly | 
+Novo usuario cadastrado		1792 | Melissa | 
+Novo usuario cadastrado		680 | Ágatha | 
+Novo usuario cadastrado		748 | Alice | 
+Novo usuario cadastrado		156 | Bárbara | 
+Novo usuario cadastrado		652 | Bruna | 
+Novo usuario cadastrado		666 | Cecilia | 
+Novo usuario cadastrado		1374 | Carolina | 
+Novo usuario cadastrado		686 | Érica | 
+Novo usuario cadastrado		498 | Raphael | 
+Novo usuario cadastrado		1444 | Danillo | 
+Novo usuario cadastrado		782 | Gustavo | 
+Novo usuario cadastrado		814 | Kaio | 
+Novo usuario cadastrado		876 | Kaique | 
+Novo usuario cadastrado		432 | Alexandre | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo usuario cadastrado		1096 | ﻿nayara rocha | 
+Novo usuario cadastrado		1898 | nirvana dantas | 
+Novo usuario cadastrado		36 | Issabella | 
+Novo usuario cadastrado		1698 | Issabelly | 
+Novo usuario cadastrado		1642 | Lorena | 
+Novo usuario cadastrado		24 | Sabrina | 
+Novo usuario cadastrado		1324 | Elena | 
+Novo usuario cadastrado		952 | Ana Clara | 
+Novo usuario cadastrado		566 | Eduarda | 
+Novo usuario cadastrado		640 | Kemilly | 
+Novo usuario cadastrado		1006 | Kamilla | 
+Novo usuario cadastrado		1138 | kamilly | 
+Novo usuario cadastrado		452 | Melissa | 
+Novo usuario cadastrado		1300 | Ágatha | 
+Novo usuario cadastrado		822 | Alice | 
+Novo usuario cadastrado		1102 | Bárbara | 
+Novo usuario cadastrado		1900 | Bruna | 
+Novo usuario cadastrado		1558 | Cecilia | 
+Novo usuario cadastrado		1946 | Carolina | 
+Novo usuario cadastrado		374 | Érica | 
+Novo usuario cadastrado		468 | Raphael | 
+Novo usuario cadastrado		108 | Danillo | 
+Novo usuario cadastrado		148 | Gustavo | 
+Novo usuario cadastrado		72 | Kaio | 
+Novo usuario cadastrado		784 | Kaique | 
+Novo usuario cadastrado		1628 | Alexandre | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
