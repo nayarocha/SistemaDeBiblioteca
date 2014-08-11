@@ -193,10 +193,12 @@ public class SistemaBiblioteca {
 				
 				System.out.println("Insira  cod do usuario");
 				Scanner a = new Scanner(System.in);
-				int codUser = a.nextInt();
+				String codUser = a.nextLine();
+				//int codUser = a.nextInt();
 				
 				Usuario usuario = null;
 				
+				//usuario = biblioteca.selecionaUsuario(codUser);
 				usuario = biblioteca.selecionaUsuario(codUser);
 				
 				

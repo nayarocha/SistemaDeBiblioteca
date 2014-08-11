@@ -97,10 +97,23 @@ public class Biblioteca {
 		return escolha;
 	}
 	
-	public Usuario selecionaUsuario(int cod){
+	/*public Usuario selecionaUsuario(int cod){
 		Usuario seleciona = null;
 		for(Usuario u: usuarios){
 			if(u.getCodUsuario() == cod){
+				seleciona = u;
+				System.out.println("USUARIO" + u.getCpf());	
+			}
+		}
+		return seleciona;
+		
+		
+	}*/
+	
+	public Usuario selecionaUsuario(String cpf){
+		Usuario seleciona = null;
+		for(Usuario u: usuarios){
+			if(u.getCpf().equalsIgnoreCase(cpf)){ 
 				seleciona = u;
 				System.out.println("USUARIO" + u.getCpf());	
 			}
