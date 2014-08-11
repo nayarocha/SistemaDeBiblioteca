@@ -1,7 +1,13 @@
 package br.ifrn.tads.poo.biblioteca;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+
+
+
 
 
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
@@ -20,9 +26,11 @@ public class Biblioteca {
 	
 	//Cadastra Usuário
 	public void cadastraUsuario(Usuario usuario){
-		usuarios.add(usuario);
-		System.out.println("Usuario cadastrado");
-		System.out.println("USUARIOS CADASTRADOS :" +usuarios.size());
+		
+			usuarios.add(usuario);
+			System.out.println("Usuario cadastrado");
+			System.out.println("USUARIOS CADASTRADOS :" +usuarios.size());
+		
 	}
 	
 	//Lista usuarios cadastrados

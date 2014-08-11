@@ -1,5 +1,9 @@
 package br.ifrn.tads.poo.biblioteca.app;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -23,7 +27,8 @@ public class SistemaBiblioteca {
 	private static Scanner cod1;
 	private static Usuario novoUsuario;
 	private static int escolha;
-
+	static File file = new File("registro_bliblioteca.txt");
+	
 	//CADASTRAR USUARIOS
 	public static void addUsuario(){				
 		//ler nome
@@ -48,20 +53,20 @@ public class SistemaBiblioteca {
 		biblioteca.cadastraUsuario(novoUsuario);
 
 		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
+		salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+		
 	}
 	
 	private static void addItenAcervo() {
 		Scanner lerOpcao2 = new Scanner(System.in);
 		int opcao2;
-		//int fim2 = -1;
 
-		//do{
 		Menu.menuItensAcervo();
 
 		opcao2 = lerOpcao2.nextInt();
 		switch(opcao2){
 
-		//LIVRO
+			//LIVRO
 		case 1:
 			addItemLivro();			
 			break;
@@ -78,7 +83,7 @@ public class SistemaBiblioteca {
 		}
 
 
-		//}while(fim2 != 0);
+		
 	}			
 
 	//ADICIONAR LIVRO NO ACERVO
@@ -106,6 +111,7 @@ public class SistemaBiblioteca {
 
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(livro);
+		salvarArquivo("Novo livro cadastrado	", livro.toString());
 	}
 
 	//ADICIONAR APOSTILA NO ACERVO
@@ -125,6 +131,8 @@ public class SistemaBiblioteca {
 
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(apostila);
+		
+		salvarArquivo("Nova apostila cadastrada		", apostila.toString());
 	}
 
 	//ADICIONAR TEXTO NO ACERVO
@@ -140,6 +148,26 @@ public class SistemaBiblioteca {
 
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(texto);
+		salvarArquivo("Novo texto adicionado ao acervo	", texto.toString());
+	}
+	
+	public static void salvarArquivo(String mensagem, String atualizacao) {
+		try {	
+//			 o true adiciona o q se vai escrever no final do arquivo
+			FileWriter atualizaArquivo = new FileWriter(file, true);
+//			sem o true cira um novo arquivo e exclui o antigo
+//			FileWriter atualizaArquivo = new FileWriter(file);
+			BufferedWriter bw = new BufferedWriter(atualizaArquivo);
+			atualizaArquivo.write(mensagem);
+			atualizaArquivo.write(atualizacao);
+			
+			bw.newLine();
+			bw.close();
+			atualizaArquivo.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {
