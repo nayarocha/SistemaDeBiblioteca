@@ -26,11 +26,7 @@ public class Biblioteca {
 	
 	//Cadastra Usuário
 	public void cadastraUsuario(Usuario usuario){
-		
-			usuarios.add(usuario);
-			System.out.println("Usuario cadastrado");
-			System.out.println("USUARIOS CADASTRADOS :" +usuarios.size());
-		
+		usuarios.add(usuario);		
 	}
 	
 	//Lista usuarios cadastrados
@@ -68,7 +64,6 @@ public class Biblioteca {
 	//Cadastra item no acervo
 	public void cadastraItem(ItemAcervo item){
 		itemDeAcervo.add(item);	
-		System.out.println("Item cadastrado com sucesso!");
 	}
 	
 	//Lista itens cadastrados no acervo

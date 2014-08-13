@@ -15,9 +15,7 @@ public class Texto extends ItemAcervo {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "CÓDIGO: " + super.codigoItem + "APOSTILA -" + this.autor;
-		
+		return "CODIGO: " + super.codigoItem + "||TEXTO - " + this.autor;
 	}
 	
 }
