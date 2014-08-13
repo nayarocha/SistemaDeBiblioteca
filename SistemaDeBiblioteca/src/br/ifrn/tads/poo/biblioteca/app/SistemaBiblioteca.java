@@ -31,7 +31,7 @@ public class SistemaBiblioteca {
 	private static Usuario novoUsuario;
 	private static int escolha;
 	static File file = new File("registro_bliblioteca.txt");
-	
+	static String linha = "-----------------------------------------------";
 	//CADASTRAR USUARIOS
 	public static void addUsuario(){				
 		//ler nome
@@ -67,7 +67,8 @@ public class SistemaBiblioteca {
 
 		File bancoUsuarios = new File("arquivo_usuarios.txt");
 		try {	
-//			 o true adiciona o q se vai escrever no final do arquivo
+			
+			//o true adiciona o q se vai escrever no final do arquivo
 			FileWriter atualizaArquivo = new FileWriter(bancoUsuarios, true);
 			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
 			escreve.newLine();
@@ -76,6 +77,8 @@ public class SistemaBiblioteca {
 			escreve.write(endereco);
 			escreve.newLine();
 			escreve.write(cpf);
+			escreve.newLine();
+			escreve.write(linha);
 			escreve.close();
 			atualizaArquivo.close();
 		} catch (IOException e) {
@@ -88,23 +91,31 @@ public class SistemaBiblioteca {
 		File arquivo = new File("arquivo_usuarios.txt");
 		try (FileReader freader = new FileReader(arquivo)){
 			BufferedReader br = new BufferedReader(freader);
-				//equanto houver mais linhas
-			while( br.ready() ){
-				//lê a proxima linha
-				String nome = br.readLine();
-				String endereco = br.readLine();
-				String cpf = br.readLine();
-				
-				Random geraCod = new Random();		
-				int codUsuario = geraCod.nextInt(1000)*2; 	
-	
-				//cria um novo usuário
-				novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
-				//Insere o novo usuario no arraylist
-				biblioteca.cadastraUsuario(novoUsuario);
-				salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+			String espaco = " ";
+			espaco = br.readLine();
 			
+			//verifica se o arquivo esta vazio
+			if(espaco != null){
+			    //equanto houver mais linhas
+				while( br.ready() ){
+					//lê a proxima linha
+					String nome = br.readLine();
+					String endereco = br.readLine();
+					String cpf = br.readLine();
+		
+					Random geraCod = new Random();		
+					int codUsuario = geraCod.nextInt(1000)*2; 	
+		
+					//cria um novo usuário
+					novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
+					//Insere o novo usuario no arraylist
+					biblioteca.cadastraUsuario(novoUsuario);
+					salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+				
+				}
+					
 			}
+				
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e1) {
