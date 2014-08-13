@@ -102,7 +102,11 @@ public class SistemaBiblioteca {
 					String nome = br.readLine();
 					String endereco = br.readLine();
 					String cpf = br.readLine();
-		
+					
+					if(br.readLine() == linha ){
+						linha = null;	
+					}
+					
 					Random geraCod = new Random();		
 					int codUsuario = geraCod.nextInt(1000)*2; 	
 		
