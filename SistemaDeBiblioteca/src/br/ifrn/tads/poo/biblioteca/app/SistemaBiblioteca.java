@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -413,12 +414,13 @@ public class SistemaBiblioteca {
 					e.printStackTrace();
 				}
 				
-				
-				Locacao locar = new Locacao(usuario, item);
-				
+				Date dataEmprestimo = biblioteca.dataEmprestimo();
+				String dataDevolucao = biblioteca.dataDevolucao();
+				Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
 				biblioteca.cadastraEmprestimo(locar);
+				System.out.println(locar.toString());
 				
-				biblioteca.listaEmprestimos();
+				
 				
 				break;
 

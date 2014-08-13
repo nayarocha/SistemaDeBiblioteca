@@ -3,12 +3,17 @@ package br.ifrn.tads.poo.biblioteca;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 
 
 
+
+import java.util.GregorianCalendar;
 
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
@@ -77,8 +82,22 @@ public class Biblioteca {
 	public void cadastraEmprestimo(Locacao locacao){	
 		emprestimos.add(locacao);
 		System.out.println("Emprestimo feito com sucesso");
+		
 	}
 	
+	public Date dataEmprestimo(){
+		Date dataEmprestimo = new Date();
+		return dataEmprestimo;
+	}
+	
+	
+	public String dataDevolucao(){
+		Calendar agora = Calendar.getInstance();
+		agora.add(Calendar.DAY_OF_MONTH, 20);	
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println();
+		return formato.format(agora.getTime());	
+	}
 	/*public void listaEmprestimos(){
 		for(String e: emprestimos){
 			System.out.println(e);
