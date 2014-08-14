@@ -107,10 +107,15 @@ public class Biblioteca {
 
 	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
 		ItemAcervo escolha = null;
+		for(Locacao l: emprestimos){
+			if(l.item.getCodigoItem() == num)
+				return null;
+		}
+		
 		for(ItemAcervo i: itemDeAcervo){
 			if(i.getCodigoItem() == num){
 				escolha=  i;
-				System.out.println("Item escolhido:" + i.getCodigoItem());		
+			System.out.println("Item escolhido:" + i.getCodigoItem());		
 			}
 		}
 		if(escolha == null)

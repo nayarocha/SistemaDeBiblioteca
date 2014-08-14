@@ -414,11 +414,17 @@ public class SistemaBiblioteca {
 					e.printStackTrace();
 				}
 				
-				Date dataEmprestimo = biblioteca.dataEmprestimo();
-				String dataDevolucao = biblioteca.dataDevolucao();
-				Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
-				biblioteca.cadastraEmprestimo(locar);
-				System.out.println(locar.toString());
+				if(item != null){
+					Date dataEmprestimo = biblioteca.dataEmprestimo();
+					String dataDevolucao = biblioteca.dataDevolucao();
+					Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
+					biblioteca.cadastraEmprestimo(locar);
+					System.out.println(locar.toString());
+				}else{
+					System.out.println("item alugado");
+				}
+				
+				
 				
 				
 				
