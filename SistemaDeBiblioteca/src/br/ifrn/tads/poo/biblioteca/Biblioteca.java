@@ -24,6 +24,7 @@ public class Biblioteca {
 	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
 	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
 	ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
+	ArrayList<Reserva> reservados = new ArrayList <Reserva>();
 	
 	public Biblioteca(){
 
@@ -34,10 +35,7 @@ public class Biblioteca {
 		usuarios.add(usuario);		
 	}
 	
-	//Lista usuarios cadastrados
 	public void listaUsuarios(){
-		// Imprime os objetos que esta no arraylist.Para isso foi necessário
-		//sobrescrever o método toString na classe usuario
 		System.out.println("||Usuários cadastrados no sistema||");
 		for(Usuario u: usuarios){
 			System.out.println(u);
@@ -45,18 +43,21 @@ public class Biblioteca {
 	}	
 	
 	public void listaEmprestimos(){
-		// Imprime os objetos que esta no arraylist.Para isso foi necessário
-		//sobrescrever o método toString na classe usuario
 		System.out.println("||Emprestimos||");
 		for(Locacao e: emprestimos){
 			System.out.println(e);
 		}		
-	}	
+	}
+	
+	public void listaReservados(){
+		System.out.println("||Reservados||");
+		for(Reserva e: reservados){
+			System.out.println(e);
+		}
+	}
 	
 	public ArrayList<ItemAcervo> buscaUsuarios(String cpf){
-		// Imprime os objetos que esta no arraylist.Para isso foi necessário
-		//sobrescrever o método toString na classe usuario
-		System.out.println("||buscando|");
+		System.out.println("||Buscando||");
 		for(Usuario u: usuarios){
 			if(u.getCpf() == cpf)
 			System.out.println(u.getNome());
@@ -78,11 +79,25 @@ public class Biblioteca {
 			System.out.println(i);
 		}
 	}
-	
+
 	public void cadastraEmprestimo(Locacao locacao){	
+		
 		emprestimos.add(locacao);
 		System.out.println("Emprestimo feito com sucesso");
 		
+	}
+	
+	public void cadastraEmprestimo(Reserva reserva){	
+		
+		emprestimos.add(reserva);
+//		reservados.getClass()(reserva);
+		System.out.println("Emprestimo feito com sucesso");
+		
+	}
+	
+	public void cadastraReserva(Reserva reserva){
+		reservados.add(reserva);
+		System.out.println();
 	}
 	
 	public Date dataEmprestimo(){
@@ -124,18 +139,6 @@ public class Biblioteca {
 		return escolha;
 	}
 	
-	/*public Usuario selecionaUsuario(int cod){
-		Usuario seleciona = null;
-		for(Usuario u: usuarios){
-			if(u.getCodUsuario() == cod){
-				seleciona = u;
-				System.out.println("USUARIO" + u.getCpf());	
-			}
-		}
-		return seleciona;
-		
-		
-	}*/
 	
 	public Usuario selecionaUsuario(String cpf){
 		Usuario seleciona = null;

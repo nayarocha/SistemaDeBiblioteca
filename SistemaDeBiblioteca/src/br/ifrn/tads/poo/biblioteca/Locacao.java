@@ -22,6 +22,9 @@ public class Locacao {
 		this.dataEmprestimo = dataEmprestimo;	
 		this.dataDevolucao = dataDevolucao;
 	}
+	public Locacao(){
+		
+	}
 	
 	@Override
 	public String toString() {
