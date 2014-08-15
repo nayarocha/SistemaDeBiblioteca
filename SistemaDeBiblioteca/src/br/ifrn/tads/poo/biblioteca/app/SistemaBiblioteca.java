@@ -31,8 +31,7 @@ public class SistemaBiblioteca {
 	private static Scanner cod1;
 	private static Usuario novoUsuario;
 	private static int escolha;
-	static File file = new File("registro_bliblioteca.txt");
-	static String linha = "-----------------------------------------------";
+	
 	//CADASTRAR USUARIOS
 	public static void addUsuario(){				
 		//ler nome
@@ -57,37 +56,13 @@ public class SistemaBiblioteca {
 		biblioteca.cadastraUsuario(novoUsuario);
 		
 		//salva no banco
-		salvaNoBanco(nome, endereco,cpf);
+		Arquivo.salvaNoBanco(nome, endereco,cpf);
 
 		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
-		salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+		Arquivo.salvar("Novo usuario cadastrado		", novoUsuario.toString());
 		
 	}
 	
-	private static void salvaNoBanco(String nome, String endereco, String cpf) {
-
-		File bancoUsuarios = new File("arquivo_usuarios.txt");
-		try {	
-			
-			//o true adiciona o q se vai escrever no final do arquivo
-			FileWriter atualizaArquivo = new FileWriter(bancoUsuarios, true);
-			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
-			escreve.newLine();
-			escreve.write(nome);
-			escreve.newLine();
-			escreve.write(endereco);
-			escreve.newLine();
-			escreve.write(cpf);
-			escreve.newLine();
-			escreve.write(linha);
-			escreve.close();
-			atualizaArquivo.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-	}
-
 	public static void addUsuariosDoArquivo(){
 		File arquivo = new File("arquivo_usuarios.txt");
 		try (FileReader freader = new FileReader(arquivo)){
@@ -104,8 +79,8 @@ public class SistemaBiblioteca {
 					String endereco = br.readLine();
 					String cpf = br.readLine();
 					
-					if(br.readLine() == linha ){
-						linha = null;	
+					if(br.readLine() == Arquivo.linha ){
+						Arquivo.linha = null;	
 					}
 					
 					Random geraCod = new Random();		
@@ -115,7 +90,7 @@ public class SistemaBiblioteca {
 					novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
 					//Insere o novo usuario no arraylist
 					biblioteca.cadastraUsuario(novoUsuario);
-					salvarArquivo("Novo usuario cadastrado		", novoUsuario.toString());
+					Arquivo.salvar("Novo usuario cadastrado		", novoUsuario.toString());
 				
 				}
 					
@@ -186,34 +161,12 @@ public class SistemaBiblioteca {
 		biblioteca.cadastraItem(livro);
 		
 		//salva no banco
-		salvaLivroNoBanco(title,autor,isbn,edicao);
+		Arquivo.salvaLivroNoBanco(title,autor,isbn,edicao);
 		
-		salvarArquivo("Novo livro cadastrado	", livro.toString());
+		Arquivo.salvar("Novo livro cadastrado	", livro.toString());
 	}
 
-	private static void salvaLivroNoBanco(String title, String autor,
-			String isbn, int edicao) {
-		File bancoUsuarios = new File("arquivo_livros.txt");
-		try {	
-//			 o true adiciona o q se vai escrever no final do arquivo
-			FileWriter atualizaArquivo = new FileWriter(bancoUsuarios, true);
-			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
-			escreve.newLine();
-			escreve.write(title);
-			escreve.newLine();
-			escreve.write(autor);
-			escreve.newLine();
-			escreve.write(isbn);
-			escreve.newLine();
-			escreve.write(edicao);
-			
-			escreve.close();
-			atualizaArquivo.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
+	
 	//ADICIONAR APOSTILA NO ACERVO
 	public static void addItemApostila(){
 		System.out.println("||Cadastrando apostila no sistema||");
@@ -233,29 +186,12 @@ public class SistemaBiblioteca {
 		biblioteca.cadastraItem(apostila);
 		
 		//salva no banco
-		salvaApostilanoBanco(title,autor);
+		Arquivo.salvaApostilanoBanco(title,autor);
 		
-		salvarArquivo("Nova apostila cadastrada		", apostila.toString());
+		Arquivo.salvar("Nova apostila cadastrada		", apostila.toString());
 	}
 
-	private static void salvaApostilanoBanco(String title, String autor) {
-		File bancoUsuarios = new File("arquivo_apostilas.txt");
-		try {	
-//			 o true adiciona o q se vai escrever no final do arquivo
-			FileWriter atualizaArquivo = new FileWriter(bancoUsuarios, true);
-			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
-			escreve.newLine();
-			escreve.write(title);
-			escreve.newLine();
-			escreve.write(autor);
-			
-			escreve.close();
-			atualizaArquivo.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
+	
 	//ADICIONAR TEXTO NO ACERVO
 	public static void addItemTexto(){
 		System.out.println("||Cadastrando TEXTO no sistema||");
@@ -274,7 +210,7 @@ public class SistemaBiblioteca {
 		salvaTextoNoBanco(autor);
 		
 		//atualizar arquivo acervo
-		salvarArquivo("Novo texto adicionado ao acervo	", texto.toString());
+		Arquivo.salvar("Novo texto adicionado ao acervo	", texto.toString());
 	}
 	
 	private static void salvaTextoNoBanco(String autor) {
@@ -312,7 +248,7 @@ public class SistemaBiblioteca {
 				//Insere novo item no arraylist
 				biblioteca.cadastraItem(livro);				
 				
-				salvarArquivo("Novo livro cadastrado	", livro.toString());
+				Arquivo.salvar("Novo livro cadastrado	", livro.toString());
 				
 			}
 		} catch (FileNotFoundException e) {
@@ -322,25 +258,7 @@ public class SistemaBiblioteca {
 		}
 	}
 	
-	public static void salvarArquivo(String mensagem, String atualizacao) {
-		try {	
-//			 o true adiciona o q se vai escrever no final do arquivo
-			FileWriter atualizaArquivo = new FileWriter(file, true);
-//			sem o true cira um novo arquivo e exclui o antigo
-//			FileWriter atualizaArquivo = new FileWriter(file);
-			BufferedWriter bw = new BufferedWriter(atualizaArquivo);
-			atualizaArquivo.write(mensagem);
-			atualizaArquivo.write(atualizacao);
-			
-			bw.newLine();
-			bw.close();
-			atualizaArquivo.close();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-	}
-
+	
 	public static void main(String[] args) {
 		addUsuariosDoArquivo();
 		criarAcervo();

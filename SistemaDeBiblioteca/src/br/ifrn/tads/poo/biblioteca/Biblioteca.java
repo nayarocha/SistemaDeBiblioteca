@@ -14,6 +14,7 @@ import java.util.Date;
 
 
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
@@ -86,11 +87,17 @@ public class Biblioteca {
 		System.out.println("Emprestimo feito com sucesso");
 		
 	}
-	
+
+	//	efetiva o empretimo de um item reservado
 	public void cadastraEmprestimo(Reserva reserva){	
 		
-		emprestimos.add(reserva);
-//		reservados.getClass()(reserva);
+//		emprestimos.add(reserva);tem de transformar reserva em locação
+		
+		for(Reserva r: reservados){
+			if(r.item.getCodigoItem() == reserva.item.getCodigoItem()){
+				reservados.remove(reserva);
+			}
+		}
 		System.out.println("Emprestimo feito com sucesso");
 		
 	}
@@ -105,7 +112,6 @@ public class Biblioteca {
 		return dataEmprestimo;
 	}
 	
-	
 	public String dataDevolucao(){
 		Calendar agora = Calendar.getInstance();
 		agora.add(Calendar.DAY_OF_MONTH, 20);	
@@ -113,13 +119,7 @@ public class Biblioteca {
 		System.out.println();
 		return formato.format(agora.getTime());	
 	}
-	/*public void listaEmprestimos(){
-		for(String e: emprestimos){
-			System.out.println(e);
-		}
-	}*/
 	
-
 	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
 		ItemAcervo escolha = null;
 		for(Locacao l: emprestimos){
@@ -153,8 +153,7 @@ public class Biblioteca {
 		
 	}
 	
-	
-	
+		
 	//CALCULAR VALOR DAS MULTAS
 	public double calcularValorMultas(Date dia){
 		return 0;
