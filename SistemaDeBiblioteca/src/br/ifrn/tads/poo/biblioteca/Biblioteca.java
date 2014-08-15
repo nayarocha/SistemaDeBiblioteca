@@ -27,96 +27,44 @@ public class Biblioteca {
 	ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
 	ArrayList<Reserva> reservados = new ArrayList <Reserva>();
 	
-	public Biblioteca(){
-
-	}
+	public Biblioteca(){}
 	
-	//Cadastra Usuário
-	public void cadastraUsuario(Usuario usuario){
-		usuarios.add(usuario);		
-	}
-	
-	public void listaUsuarios(){
-		System.out.println("||Usuários cadastrados no sistema||");
-		for(Usuario u: usuarios){
-			System.out.println(u);
-		}		
-	}	
-	
-	public void listaEmprestimos(){
-		System.out.println("||Emprestimos||");
-		for(Locacao e: emprestimos){
-			System.out.println(e);
-		}		
-	}
-	
-	public void listaReservados(){
-		System.out.println("||Reservados||");
-		for(Reserva e: reservados){
-			System.out.println(e);
-		}
-	}
-	
-	public ArrayList<ItemAcervo> buscaUsuarios(String cpf){
-		System.out.println("||Buscando||");
-		for(Usuario u: usuarios){
-			if(u.getCpf() == cpf)
-			System.out.println(u.getNome());
-		}	
-		
-		return itemDeAcervo;
-	}	
-	
-	
-	//Cadastra item no acervo
+	//Cadastra novo item no acervo
 	public void cadastraItem(ItemAcervo item){
 		itemDeAcervo.add(item);	
 	}
-	
-	//Lista itens cadastrados no acervo
-	public void listaItemAcervo(){
-		System.out.println("===== ITENS CADASTRADOS NO SISTEMA =====");
-		for(ItemAcervo i: itemDeAcervo){
-			System.out.println(i);
-		}
+			
+	//Cadastra novo Usuário
+	public void cadastraUsuario(Usuario usuario){
+		usuarios.add(usuario);		
 	}
-
-	public void cadastraEmprestimo(Locacao locacao){	
 		
+	//Cadastra novo emprestimo 
+	public void cadastraEmprestimo(Locacao locacao){		
 		emprestimos.add(locacao);
-		System.out.println("Emprestimo feito com sucesso");
-		
+		System.out.println("Emprestimo feito com sucesso");		
 	}
-
-	//	efetiva o empretimo de um item reservado
+	
+	//Cadastra nova reserva
+	public void cadastraReserva(Reserva reserva){
+		reservados.add(reserva);
+		System.out.println();
+	}
+				
+	//Cadastra emprestimo de um item reservado
 	public void cadastraEmprestimo(Reserva reserva){	
-		
-//		emprestimos.add(reserva);tem de transformar reserva em locação
-		
 		for(Reserva r: reservados){
 			if(r.item.getCodigoItem() == reserva.item.getCodigoItem()){
 				reservados.remove(reserva);
 			}
 		}
-		System.out.println("Emprestimo feito com sucesso");
+		System.out.println("Emprestimo feito com sucesso");	
+	}
 		
-	}
-	
-	public Date dataEmprestimo(){
-		Date dataEmprestimo = new Date();
-		return dataEmprestimo;
-	}
-	
-	public String dataDevolucao(){
-		Calendar agora = Calendar.getInstance();
-		agora.add(Calendar.DAY_OF_MONTH, 20);	
-		Format formato = new SimpleDateFormat("dd/MM/yyyy");
-		System.out.println();
-		return formato.format(agora.getTime());	
-	}
-	
+	//Seleciona item de acervo para alugar
 	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
 		ItemAcervo escolha = null;
+		//VERIFICA SE O ITEM JA ESTA LOCADO
 		for(Locacao l: emprestimos){
 			if(l.item.getCodigoItem() == num)
 				return null;
@@ -134,7 +82,7 @@ public class Biblioteca {
 		return escolha;
 	}
 	
-	
+	//Seleciona usuario a partir do CPF
 	public Usuario selecionaUsuario(String cpf){
 		Usuario seleciona = null;
 		for(Usuario u: usuarios){
@@ -144,35 +92,63 @@ public class Biblioteca {
 			}
 		}
 		return seleciona;
-		
-		
+	}	
+	
+	//lista usuarios 
+	public void listaUsuarios(){
+		System.out.println("||Usuários cadastrados no sistema||");
+		for(Usuario u: usuarios){
+			System.out.println(u);
+		}		
+	}	
+	
+	//listaritens locados
+	public void listaEmprestimos(){
+		System.out.println("||Emprestimos||");
+		for(Locacao e: emprestimos){
+			System.out.println(e);
+		}		
 	}
 	
-	
-	//CALCULAR VALOR DAS MULTAS
-	public double calcularValorMultas(Date dia){
-		return 0;
+	//lista itens reservados
+	public void listaReservados(){
+		System.out.println("||Reservados||");
+		for(Reserva e: reservados){
+			System.out.println(e);
+		}
 	}
-
 	
+	//Lista itens cadastrados no acervo
+	public void listaItemAcervo(){
+		System.out.println("===== ITENS CADASTRADOS NO SISTEMA =====");
+		for(ItemAcervo i: itemDeAcervo){
+			System.out.println(i);
+		}
+	}
 	
+	//Data de emprestimo 
+	public Date dataEmprestimo(){
+		Date dataEmprestimo = new Date();
+		return dataEmprestimo;
+	}
+	
+	//Data de devolucao
+	public String dataDevolucao(){
+		Calendar agora = Calendar.getInstance();
+		agora.add(Calendar.DAY_OF_MONTH, 20);	
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println();
+		return formato.format(agora.getTime());	
+	}
+		
+	//Data da reserva 
 	public String dataEspira(){
 		Calendar agora = Calendar.getInstance();
 		agora.add(Calendar.DAY_OF_MONTH, 3);	
 		Format formato = new SimpleDateFormat("dd/MM/yyyy");
-//		System.out.println();
 		return formato.format(agora.getTime());	
 	}
-	
-	public void cadastraReserva(Reserva reserva){
-		reservados.add(reserva);
-		System.out.println();
-	}
 
-	
-	
-	
-	
 }
 
 

@@ -57,13 +57,13 @@ public class SistemaBiblioteca {
 		biblioteca.cadastraUsuario(novoUsuario);
 		
 		//salva no banco
-		Arquivo.salvaNoBanco(nome, endereco,cpf);
+		RegistrosBiblioteca.salvaNoBanco(nome, endereco,cpf);
 
 		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
-		Arquivo.salvar("Novo usuario cadastrado		", novoUsuario.toString());
-		
+		RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());		
 	}
 	
+	//LER USUARIOS CADASTRADOS DO ARQUIVO
 	public static void addUsuariosDoArquivo(){
 		File arquivo = new File("arquivo_usuarios.txt");
 		try (FileReader freader = new FileReader(arquivo)){
@@ -80,8 +80,8 @@ public class SistemaBiblioteca {
 					String endereco = br.readLine();
 					String cpf = br.readLine();
 					
-					if(br.readLine() == Arquivo.linha ){
-						Arquivo.linha = null;	
+					if(br.readLine() == RegistrosBiblioteca.linha ){
+						RegistrosBiblioteca.linha = null;	
 					}
 					
 					Random geraCod = new Random();		
@@ -91,48 +91,39 @@ public class SistemaBiblioteca {
 					novoUsuario = new Usuario(codUsuario,nome, endereco,cpf);
 					//Insere o novo usuario no arraylist
 					biblioteca.cadastraUsuario(novoUsuario);
-					Arquivo.salvar("Novo usuario cadastrado		", novoUsuario.toString());
-				
-				}
-					
+					RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());			
+				}					
 			}
 				
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e1) {
 			e1.printStackTrace();
-		}
-		
-				
+		}				
 	}
 	
-	private static void addItenAcervo() {
+	//ADICIONA ITEM NO ACERVO (LIVRO - APOSTILA - TEXTO)
+	private static void addItemAcervo() {
 		Scanner lerOpcao2 = new Scanner(System.in);
 		int opcao2;
-
 		Menu.menuItensAcervo();
-
 		opcao2 = lerOpcao2.nextInt();
 		switch(opcao2){
-
-			//LIVRO
+		//LIVRO
 		case 1:
 			addItemLivro();			
-			break;
+		break;
 
-			//APOSTILA
+		//APOSTILA
 		case 2:
 			addItemApostila();
-			break;
+		break;
 
-			//TEXTO
+		//TEXTO
 		case 3:
 			addItemTexto();
-			break;
-		}
-
-
-		
+		break;
+		}	
 	}			
 
 	//ADICIONAR LIVRO NO ACERVO
@@ -157,16 +148,12 @@ public class SistemaBiblioteca {
 
 		//Cria um novo item no acervo
 		ItemAcervo livro = new Livro(title,autor,isbn,edicao); 
-
 		//Insere novo item no arraylist
-		biblioteca.cadastraItem(livro);
-		
+		biblioteca.cadastraItem(livro);		
 		//salva no banco
-		Arquivo.salvaLivroNoBanco(title,autor,isbn,edicao);
-		
-		Arquivo.salvar("Novo livro cadastrado	", livro.toString());
+		RegistrosBiblioteca.salvaLivroNoBanco(title,autor,isbn,edicao);	
+		RegistrosBiblioteca.salvar("Novo livro cadastrado	", livro.toString());
 	}
-
 	
 	//ADICIONAR APOSTILA NO ACERVO
 	public static void addItemApostila(){
@@ -186,17 +173,14 @@ public class SistemaBiblioteca {
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(apostila);
 		
-		//salva no banco
-		Arquivo.salvaApostilanoBanco(title,autor);
-		
-		Arquivo.salvar("Nova apostila cadastrada		", apostila.toString());
+		//salva no arquivo_apostila.txt
+		RegistrosBiblioteca.salvaApostilanoBanco(title,autor);	
+		RegistrosBiblioteca.salvar("Nova apostila cadastrada		", apostila.toString());
 	}
-
 	
 	//ADICIONAR TEXTO NO ACERVO
 	public static void addItemTexto(){
 		System.out.println("||Cadastrando TEXTO no sistema||");
-
 		System.out.println("AUTOR");
 		Scanner b = new Scanner(System.in);
 		String autor = b.nextLine();
@@ -207,50 +191,30 @@ public class SistemaBiblioteca {
 		//Insere novo item no arraylist
 		biblioteca.cadastraItem(texto);
 		
-		//salvando no banco
-		salvaTextoNoBanco(autor);
+		//Salva  no arquivo_textos.txt
+		RegistrosBiblioteca.salvaTextoNoBanco(autor);
 		
 		//atualizar arquivo acervo
-		Arquivo.salvar("Novo texto adicionado ao acervo	", texto.toString());
+		RegistrosBiblioteca.salvar("Novo texto adicionado ao acervo	", texto.toString());
 	}
-	
-	private static void salvaTextoNoBanco(String autor) {
-		File bancoUsuarios = new File("arquivo_textos.txt");
-		try {	
-//			 o true adiciona o q se vai escrever no final do arquivo
-			FileWriter atualizaArquivo = new FileWriter(bancoUsuarios, true);
-			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
-			escreve.newLine();
-			escreve.write(autor);
-			
-			escreve.close();
-			atualizaArquivo.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
+		
+	//CARREGA ACERVO DO SISTEMA
 	public static void criarAcervo(){
 		File arquivo = new File("arquivo_livros.txt");
 		try (FileReader freader = new FileReader(arquivo)){
 			BufferedReader br = new BufferedReader(freader);
-				//equanto houver mais linhas
+			
 			while( br.ready() ){
-				//lê a proxima linha
+				
 				String title = br.readLine();
 				String autor = br.readLine();
 				String isbn = br.readLine();
-				String edicao1 = br.readLine();
-				//Integer.parseInt(); 
+				String edicao1 = br.readLine();		
 				int edicao = Integer.parseInt(edicao1); 
 				
 				ItemAcervo livro = new Livro(title,autor,isbn,edicao); 
-
-				//Insere novo item no arraylist
 				biblioteca.cadastraItem(livro);				
-				
-				Arquivo.salvar("Novo livro cadastrado	", livro.toString());
-				
+				RegistrosBiblioteca.salvar("Novo livro cadastrado	", livro.toString());			
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -259,16 +223,44 @@ public class SistemaBiblioteca {
 		}
 	}
 	
-	private static void reservar() {
-		//escolher usuario e item
+	//ALUGAR ITEM DO ACERVO
+	public static void alugarItem(){
+		System.out.println("Insira  CPF do usuario");
+		Scanner a = new Scanner(System.in);
+		String cpfUser = a.nextLine();
+		Usuario usuario = null;	
+		usuario = biblioteca.selecionaUsuario(cpfUser);	
+		
+		System.out.println("insira codigo do livro");
+		Scanner cod = new Scanner(System.in);
+		int codigo = cod.nextInt();
+		ItemAcervo item = null;
+		
+		try {
+			item = biblioteca.escolherItemAcervo(codigo);
+		} catch (CodigoInvalidoException e) {
+			e.printStackTrace();
+		}
+		
+		if(item != null){
+			Date dataEmprestimo = biblioteca.dataEmprestimo();
+			String dataDevolucao = biblioteca.dataDevolucao();
+			Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
+			biblioteca.cadastraEmprestimo(locar);
+			System.out.println(locar.toString());
+		}else{
+			System.out.println("item alugado");
+		}	
+	}
+	
+	//RESERVA ITEM DO ACERVO
+	public static void reservar() {	
 		System.out.println("Insira  CPF do usuario");
 		Scanner c = new Scanner(System.in);
 		String cpfUser1 = c.nextLine();
-		Usuario usuario2 = null;
-		
+		Usuario usuario2 = null;	
 		usuario2 = biblioteca.selecionaUsuario(cpfUser1);
-		
-		//COdigo do Item
+			
 		System.out.println("insira codigo do livro");
 		Scanner codReserva = new Scanner(System.in);
 		int codigoReserva = codReserva .nextInt();
@@ -279,13 +271,13 @@ public class SistemaBiblioteca {
 		} catch (CodigoInvalidoException e) {
 			e.printStackTrace();
 		}
-		//efetivar reserva
+	
 		if(itemReserva != null){
 			Reserva reservaItem = new Reserva(usuario2, itemReserva);
 			biblioteca.cadastraReserva(reservaItem);
-			Arquivo.salvar("", reservaItem.toString());
+			RegistrosBiblioteca.salvar("", reservaItem.toString());
 		}else{
-			System.out.println("Impossivel reservar este item");
+			System.out.println("Impossível reservar este item");
 		}
 	}
 
@@ -304,92 +296,48 @@ public class SistemaBiblioteca {
 
 			//Cadastrar usuario
 			case 1:
-				addUsuario();
-				
-				break;
+				addUsuario();	
+			break;
 
-				//listar usuários cadastrados
+			//listar usuários cadastrados
 			case 2:
 				biblioteca.listaUsuarios();
+			break;
 
-				break;
-
-				//Cadastrar iten
+			//Cadastrar item
 			case 3:
-				addItenAcervo();
-				break;
-
+				addItemAcervo();
+			break;
+			
+			//Listar itens do acervo
 			case 4:
 				biblioteca.listaItemAcervo();
-				break;
-
+			break;
+			
+			//Fazer empréstimo
 			case 5:
-				/*	ItemAcervo escolhido = null;
-				//while(escolhido == null){
-				try{
-					System.out.println("Insira o código do item");
-					Scanner ler = new Scanner(System.in);
-					escolha = ler.nextInt();
-				
-					escolhido = biblioteca.escolherItemAcervo(escolha);
-				}catch(CodigoInvalidoException e){
-					System.out.println(e.getMessage());
-				}
-				//	} */
-				break;
-
+				biblioteca.listaItemAcervo();
+				alugarItem();
+			break;
+			
+			//Listar itens alugados
 			case 6:
+				
+			break;	
+			
+			//Reservar item do acervo
+			case 7:	
 				biblioteca.listaItemAcervo();
+				reservar();	
+			break;
+			
+			//Listar itens reservados
+			case 8:	
 				
-				System.out.println("Insira  CPF do usuario");
-				Scanner a = new Scanner(System.in);
-				String cpfUser = a.nextLine();
-				//int codUser = a.nextInt();
-				
-				Usuario usuario = null;
-				
-				//usuario = biblioteca.selecionaUsuario(codUser);
-				usuario = biblioteca.selecionaUsuario(cpfUser);
-				
-				//COdigo do livro
-				System.out.println("insira codigo do livro");
-				Scanner cod = new Scanner(System.in);
-				int codigo = cod.nextInt();
-				
-				ItemAcervo item = null;
-				try {
-					item = biblioteca.escolherItemAcervo(codigo);
-				} catch (CodigoInvalidoException e) {
-					e.printStackTrace();
-				}
-				
-				if(item != null){
-					Date dataEmprestimo = biblioteca.dataEmprestimo();
-					String dataDevolucao = biblioteca.dataDevolucao();
-					Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
-					biblioteca.cadastraEmprestimo(locar);
-					System.out.println(locar.toString());
-				}else{
-					System.out.println("item alugado");
-				}
-				
-				
-				break;
-				
-			case 7:
-				//RESERVAR ITEN
-				biblioteca.listaItemAcervo();
-				reservar();
-				
-				break;
-
+			break;
+			
 			}
-
-
 		}while(fim != 0);
-
-	}
-
-	
+	}	
 }
 

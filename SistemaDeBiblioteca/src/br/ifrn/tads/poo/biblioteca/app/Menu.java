@@ -4,13 +4,14 @@ public  class  Menu  {
 	
 	public static void menuPrincipal(){
 		System.out.println("----------SISTEMA DE BIBLIOTECA----------");
-		System.out.println("[1] - CADASTRAR USUARIO");
+		System.out.println("[1] - CADASTRAR NOVO USUÁRIO");
 		System.out.println("[2] - LISTAR USUÁRIOS CADASTRADOS");
 		System.out.println("[3] - CADASTRAR ITEM NO SISTEMA");
 		System.out.println("[4] - LISTAR ITENS CADASTRADOS NO SISTEMA");
-		System.out.println("[5] - ESCOLHER ITEM PARA ALUGAR");
-		System.out.println("[6] - ALUGAR ITEM");
+		System.out.println("[5] - ALUGAR ITEM");
+		System.out.println("[6] - LISTAR ITENS ALUGADOS");
 		System.out.println("[7] - RESERVAR ITEM");
+		System.out.println("[8] - LISTAR ITENS RESERVADOS");
 		System.out.println("-----------------------------------------");
 		
 	}
