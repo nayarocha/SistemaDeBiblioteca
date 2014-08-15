@@ -16,7 +16,7 @@ public class Locacao {
 	Date dataEmprestimo = null;
 	String dataDevolucao = null;
 	
-	public Locacao( Usuario usuario, ItemAcervo item , Date dataEmprestimo, String dataDevolucao){
+	public Locacao(Usuario usuario, ItemAcervo item , Date dataEmprestimo, String dataDevolucao){
 		this.user = usuario;
 		this.item =item;
 		this.dataEmprestimo = dataEmprestimo;	

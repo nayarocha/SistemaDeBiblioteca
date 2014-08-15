@@ -10,6 +10,7 @@ public  class  Menu  {
 		System.out.println("[4] - LISTAR ITENS CADASTRADOS NO SISTEMA");
 		System.out.println("[5] - ESCOLHER ITEM PARA ALUGAR");
 		System.out.println("[6] - ALUGAR ITEM");
+		System.out.println("[7] - RESERVAR ITEM");
 		System.out.println("-----------------------------------------");
 		
 	}

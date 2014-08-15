@@ -102,11 +102,6 @@ public class Biblioteca {
 		
 	}
 	
-	public void cadastraReserva(Reserva reserva){
-		reservados.add(reserva);
-		System.out.println();
-	}
-	
 	public Date dataEmprestimo(){
 		Date dataEmprestimo = new Date();
 		return dataEmprestimo;
@@ -153,11 +148,29 @@ public class Biblioteca {
 		
 	}
 	
-		
+	
 	//CALCULAR VALOR DAS MULTAS
 	public double calcularValorMultas(Date dia){
 		return 0;
-	}	
+	}
+
+	
+	
+	public String dataEspira(){
+		Calendar agora = Calendar.getInstance();
+		agora.add(Calendar.DAY_OF_MONTH, 3);	
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+//		System.out.println();
+		return formato.format(agora.getTime());	
+	}
+	
+	public void cadastraReserva(Reserva reserva){
+		reservados.add(reserva);
+		System.out.println();
+	}
+
+	
+	
 	
 	
 }

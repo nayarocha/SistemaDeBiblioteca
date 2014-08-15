@@ -856,3 +856,123 @@ Novo livro cadastrado	CODIGO - 1011
 Novo livro cadastrado	CODIGO - 1012
 Novo livro cadastrado	CODIGO - 1013
 Novo texto adicionado ao acervo	CODIGO: 1014||TEXTO - Marcio Douglas
+Novo usuario cadastrado		984 | Nayara Rocha | 
+Novo usuario cadastrado		1568 | Nirvana Dantas | 
+Novo usuario cadastrado		1326 | Placido neto | 
+Novo usuario cadastrado		1920 | Alejandro | 
+Novo usuario cadastrado		564 | Robson | 
+Novo usuario cadastrado		994 | Suzyanne | 
+Novo usuario cadastrado		1414 | Taina | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Novo usuario cadastrado		404 | SARA | 
+Novo texto adicionado ao acervo	CODIGO: 1014||TEXTO - danielle freitas
+Item reservado: CODIGO: 1014||TEXTO - danielle freitas
+Usuário: 404 | SARA | 
+Data da reserva: 15/08/14
+Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		732 | Nayara Rocha | 
+Novo usuario cadastrado		52 | Nirvana Dantas | 
+Novo usuario cadastrado		824 | Placido neto | 
+Novo usuario cadastrado		878 | Alejandro | 
+Novo usuario cadastrado		1720 | Robson | 
+Novo usuario cadastrado		1096 | Suzyanne | 
+Novo usuario cadastrado		2 | Taina | 
+Novo usuario cadastrado		698 | SARA | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Novo usuario cadastrado		1538 | Nayara Rocha | 
+Novo usuario cadastrado		848 | Nirvana Dantas | 
+Novo usuario cadastrado		496 | Placido neto | 
+Novo usuario cadastrado		402 | Alejandro | 
+Novo usuario cadastrado		974 | Robson | 
+Novo usuario cadastrado		1348 | Suzyanne | 
+Novo usuario cadastrado		1770 | Taina | 
+Novo usuario cadastrado		948 | SARA | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Novo usuario cadastrado		1906 | Nayara Rocha | 
+Novo usuario cadastrado		1458 | Nirvana Dantas | 
+Novo usuario cadastrado		752 | Placido neto | 
+Novo usuario cadastrado		982 | Alejandro | 
+Novo usuario cadastrado		96 | Robson | 
+Novo usuario cadastrado		1856 | Suzyanne | 
+Novo usuario cadastrado		1332 | Taina | 
+Novo usuario cadastrado		1412 | SARA | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Item reservado: CODIGO - 1013
+Usuário: 1412 | SARA | 
+Data da reserva: 15/08/14
+Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		988 | Nayara Rocha | 
+Novo usuario cadastrado		616 | Nirvana Dantas | 
+Novo usuario cadastrado		990 | Placido neto | 
+Novo usuario cadastrado		610 | Alejandro | 
+Novo usuario cadastrado		762 | Robson | 
+Novo usuario cadastrado		1162 | Suzyanne | 
+Novo usuario cadastrado		1886 | Taina | 
+Novo usuario cadastrado		1374 | SARA | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Item reservado: CODIGO - 1013 || Usuário: 1374 | SARA |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014

@@ -15,6 +15,7 @@ import java.util.Scanner;
 import br.ifrn.tads.poo.biblioteca.Biblioteca;
 import br.ifrn.tads.poo.biblioteca.CodigoInvalidoException;
 import br.ifrn.tads.poo.biblioteca.Locacao;
+import br.ifrn.tads.poo.biblioteca.Reserva;
 import br.ifrn.tads.poo.biblioteca.acervo.Apostila;
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.acervo.Livro;
@@ -258,6 +259,36 @@ public class SistemaBiblioteca {
 		}
 	}
 	
+	private static void reservar() {
+		//escolher usuario e item
+		System.out.println("Insira  CPF do usuario");
+		Scanner c = new Scanner(System.in);
+		String cpfUser1 = c.nextLine();
+		Usuario usuario2 = null;
+		
+		usuario2 = biblioteca.selecionaUsuario(cpfUser1);
+		
+		//COdigo do Item
+		System.out.println("insira codigo do livro");
+		Scanner codReserva = new Scanner(System.in);
+		int codigoReserva = codReserva .nextInt();
+		
+		ItemAcervo itemReserva = null;
+		try {
+			itemReserva  = biblioteca.escolherItemAcervo(codigoReserva);
+		} catch (CodigoInvalidoException e) {
+			e.printStackTrace();
+		}
+		//efetivar reserva
+		if(itemReserva != null){
+			Reserva reservaItem = new Reserva(usuario2, itemReserva);
+			biblioteca.cadastraReserva(reservaItem);
+			Arquivo.salvar("", reservaItem.toString());
+		}else{
+			System.out.println("Impossivel reservar este item");
+		}
+	}
+
 	
 	public static void main(String[] args) {
 		addUsuariosDoArquivo();
@@ -312,13 +343,13 @@ public class SistemaBiblioteca {
 				
 				System.out.println("Insira  CPF do usuario");
 				Scanner a = new Scanner(System.in);
-				String codUser = a.nextLine();
+				String cpfUser = a.nextLine();
 				//int codUser = a.nextInt();
 				
 				Usuario usuario = null;
 				
 				//usuario = biblioteca.selecionaUsuario(codUser);
-				usuario = biblioteca.selecionaUsuario(codUser);
+				usuario = biblioteca.selecionaUsuario(cpfUser);
 				
 				//COdigo do livro
 				System.out.println("insira codigo do livro");
@@ -343,8 +374,12 @@ public class SistemaBiblioteca {
 				}
 				
 				
+				break;
 				
-				
+			case 7:
+				//RESERVAR ITEN
+				biblioteca.listaItemAcervo();
+				reservar();
 				
 				break;
 
@@ -355,5 +390,6 @@ public class SistemaBiblioteca {
 
 	}
 
+	
 }
 
