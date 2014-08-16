@@ -15,7 +15,6 @@ public class Apostila extends ItemAcervo{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "CÓDIGO: " + super.codigoItem + "TÍTULO: " + this.titulo;
 	}
 

@@ -13,7 +13,6 @@ public  class  Menu  {
 		System.out.println("[7] - RESERVAR ITEM");
 		System.out.println("[8] - LISTAR ITENS RESERVADOS");
 		System.out.println("-----------------------------------------");
-		
 	}
 	
 	public static void menuItensAcervo(){
@@ -21,5 +20,11 @@ public  class  Menu  {
 		System.out.println("[1] - LIVRO ");
 		System.out.println("[2] - APOSTILA");
 		System.out.println("[3] - TEXTO");
+	}
+
+	public static void aluguel() {
+		System.out.println("--------ALUGUEL DE ITENS--------");
+		System.out.println("[1] - ALUGUEL DIRETO ");
+		System.out.println("[2] - ALUGUEL POR RESERVA");
 	}
 }

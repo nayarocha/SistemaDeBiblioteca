@@ -1,13 +1,10 @@
 package br.ifrn.tads.poo.biblioteca.app;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
@@ -248,6 +245,8 @@ public class SistemaBiblioteca {
 			Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
 			biblioteca.cadastraEmprestimo(locar);
 			System.out.println(locar.toString());
+			
+			Arquivo.salvar("Locacao >> ", locar.toString());
 		}else{
 			System.out.println("item alugado");
 		}	
@@ -316,8 +315,28 @@ public class SistemaBiblioteca {
 			
 			//Fazer empréstimo
 			case 5:
-				biblioteca.listaItemAcervo();
-				alugarItem();
+				Menu.aluguel();
+				Scanner c1 = new Scanner(System.in);
+				int ok = c1.nextInt();
+				if(ok == 1){//ALUGUEL DIRETO
+					biblioteca.listaItemAcervo();//ten de listar itens disponiveis 
+					alugarItem();
+				}else if(ok == 2){//ALUGUEL POR RESERVA
+					
+					System.out.println("Insira  CPF do usuario");
+					Scanner c = new Scanner(System.in);
+					String cpfUser1 = c.nextLine();
+					Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
+					
+					Reserva novaLocacao = biblioteca.buscarReserva(usuario2);
+					biblioteca.cadastraEmprestimo(novaLocacao);
+					Locacao jaLocado = novaLocacao; 
+					
+					System.out.println(jaLocado.toString());		//o tostring ta chamando o da reserva
+					Arquivo.salvar("Locacao >> ", jaLocado.toString());
+				}else//volta ao menu
+					break;
+				
 			break;
 			
 			//Listar itens alugados

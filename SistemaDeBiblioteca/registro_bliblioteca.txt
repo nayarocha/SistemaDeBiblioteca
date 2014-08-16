@@ -976,3 +976,188 @@ Novo livro cadastrado	CODIGO - 1011
 Novo livro cadastrado	CODIGO - 1012
 Novo livro cadastrado	CODIGO - 1013
 Item reservado: CODIGO - 1013 || Usuário: 1374 | SARA |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		1242 | Nayara Rocha | 
+Novo usuario cadastrado		1608 | Nirvana Dantas | 
+Novo usuario cadastrado		304 | Placido neto | 
+Novo usuario cadastrado		1922 | Alejandro | 
+Novo usuario cadastrado		1086 | Robson | 
+Novo usuario cadastrado		382 | Suzyanne | 
+Novo usuario cadastrado		398 | Taina | 
+Novo usuario cadastrado		480 | SARA | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Novo usuario cadastrado		1958 | Sinha benta | 
+Novo texto adicionado ao acervo	CODIGO: 1014||TEXTO - Oneide Bezerra
+Item reservado: CODIGO: 1014||TEXTO - Oneide Bezerra || Usuário: 1958 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		1004 | Nayara Rocha | 
+Novo usuario cadastrado		346 | Nirvana Dantas | 
+Novo usuario cadastrado		1208 | Placido neto | 
+Novo usuario cadastrado		114 | Alejandro | 
+Novo usuario cadastrado		746 | Robson | 
+Novo usuario cadastrado		1026 | Suzyanne | 
+Novo usuario cadastrado		1846 | Taina | 
+Novo usuario cadastrado		926 | SARA | 
+Novo usuario cadastrado		28 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Item reservado: CODIGO - 1013 || Usuário: 28 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		582 | Nayara Rocha | 
+Novo usuario cadastrado		1038 | Nirvana Dantas | 
+Novo usuario cadastrado		862 | Placido neto | 
+Novo usuario cadastrado		970 | Alejandro | 
+Novo usuario cadastrado		1112 | Robson | 
+Novo usuario cadastrado		278 | Suzyanne | 
+Novo usuario cadastrado		1744 | Taina | 
+Novo usuario cadastrado		1582 | SARA | 
+Novo usuario cadastrado		1600 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Item reservado: CODIGO - 1013 || Usuário: 1600 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Item reservado: CODIGO - 1011 || Usuário: 1600 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Locacao >> Item reservado: CODIGO - 1011 || Usuário: 1600 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		412 | Nayara Rocha | 
+Novo usuario cadastrado		690 | Nirvana Dantas | 
+Novo usuario cadastrado		390 | Placido neto | 
+Novo usuario cadastrado		66 | Alejandro | 
+Novo usuario cadastrado		866 | Robson | 
+Novo usuario cadastrado		1844 | Suzyanne | 
+Novo usuario cadastrado		110 | Taina | 
+Novo usuario cadastrado		1606 | SARA | 
+Novo usuario cadastrado		1874 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Novo usuario cadastrado		1020 | Nayara Rocha | 
+Novo usuario cadastrado		1322 | Nirvana Dantas | 
+Novo usuario cadastrado		1986 | Placido neto | 
+Novo usuario cadastrado		1500 | Alejandro | 
+Novo usuario cadastrado		1302 | Robson | 
+Novo usuario cadastrado		1720 | Suzyanne | 
+Novo usuario cadastrado		774 | Taina | 
+Novo usuario cadastrado		1672 | SARA | 
+Novo usuario cadastrado		446 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000
+Novo livro cadastrado	CODIGO - 1001
+Novo livro cadastrado	CODIGO - 1002
+Novo livro cadastrado	CODIGO - 1003
+Novo livro cadastrado	CODIGO - 1004
+Novo livro cadastrado	CODIGO - 1005
+Novo livro cadastrado	CODIGO - 1006
+Novo livro cadastrado	CODIGO - 1007
+Novo livro cadastrado	CODIGO - 1008
+Novo livro cadastrado	CODIGO - 1009
+Novo livro cadastrado	CODIGO - 1010
+Novo livro cadastrado	CODIGO - 1011
+Novo livro cadastrado	CODIGO - 1012
+Novo livro cadastrado	CODIGO - 1013
+Item reservado: CODIGO - 1010 || Usuário: 446 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Locacao >> Item reservado: CODIGO - 1010 || Usuário: 446 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		1192 | Nayara Rocha | 
+Novo usuario cadastrado		1620 | Nirvana Dantas | 
+Novo usuario cadastrado		1480 | Placido neto | 
+Novo usuario cadastrado		1706 | Alejandro | 
+Novo usuario cadastrado		1816 | Robson | 
+Novo usuario cadastrado		1590 | Suzyanne | 
+Novo usuario cadastrado		1098 | Taina | 
+Novo usuario cadastrado		1150 | SARA | 
+Novo usuario cadastrado		194 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Item reservado: CODIGO - 1013LIVRO - Eu, Cláudio || Usuário: 194 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Locacao >> Item reservado: CODIGO - 1013LIVRO - Eu, Cláudio || Usuário: 194 | Sinha benta |  || Data da reserva: 15/08/14 || Data que espira a reserva: 18/08/2014
+Novo usuario cadastrado		1780 | Nayara Rocha | 
+Novo usuario cadastrado		834 | Nirvana Dantas | 
+Novo usuario cadastrado		116 | Placido neto | 
+Novo usuario cadastrado		1296 | Alejandro | 
+Novo usuario cadastrado		1878 | Robson | 
+Novo usuario cadastrado		686 | Suzyanne | 
+Novo usuario cadastrado		1508 | Taina | 
+Novo usuario cadastrado		828 | SARA | 
+Novo usuario cadastrado		336 | Sinha benta | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo usuario cadastrado		1872 | Antonio Conselheiro | 
+Novo usuario cadastrado		1936 | ze colmeia | 
+Novo usuario cadastrado		480 | Machado de Assis | 
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Telações perigosas
+Nova apostila cadastrada		CÓDIGO: 1016TÍTULO: Algoritmos desmistificado
+Nova apostila cadastrada		CÓDIGO: 1017TÍTULO: Encontrando ouro
+Nova apostila cadastrada		CÓDIGO: 1018TÍTULO: Interação programa humano
+Novo texto adicionado ao acervo	CODIGO: 1019||TEXTO - Niam Cat
+Novo texto adicionado ao acervo	CODIGO: 1020||TEXTO - Collor de melo
+Novo texto adicionado ao acervo	CODIGO: 1021||TEXTO - Regina case
+Novo texto adicionado ao acervo	CODIGO: 1022||TEXTO - Sdbrama Ajubuprava
+Novo texto adicionado ao acervo	CODIGO: 1023||TEXTO - Ana Maria da Silva
+Novo texto adicionado ao acervo	CODIGO: 1024||TEXTO - Josh Gobram

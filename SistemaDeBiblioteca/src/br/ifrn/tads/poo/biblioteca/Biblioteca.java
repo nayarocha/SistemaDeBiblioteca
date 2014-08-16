@@ -22,10 +22,10 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public class Biblioteca {
 	private String nomeBiblioteca;	
 	
-	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
-	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
-	ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
-	ArrayList<Reserva> reservados = new ArrayList <Reserva>();
+	private ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
+	private ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
+	private ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
+	private ArrayList<Reserva> reservados = new ArrayList <Reserva>();
 	
 	public Biblioteca(){}
 	
@@ -53,11 +53,10 @@ public class Biblioteca {
 				
 	//Cadastra emprestimo de um item reservado
 	public void cadastraEmprestimo(Reserva reserva){	
-		for(Reserva r: reservados){
-			if(r.item.getCodigoItem() == reserva.item.getCodigoItem()){
-				reservados.remove(reserva);
-			}
-		}
+		reserva.setDataEmprestimo();
+		reserva.setDataDevolucao();
+		emprestimos.add(reserva);
+		reservados.remove(reserva);
 		System.out.println("Emprestimo feito com sucesso");	
 	}
 		
@@ -83,13 +82,16 @@ public class Biblioteca {
 	}
 	
 	//Seleciona usuario a partir do CPF
-	public Usuario selecionaUsuario(String cpf){
+	public Usuario selecionaUsuario(String cpf){//LEMBRETE EXCESSAO CPF INVALIDO TRATAR PEDINDO P DIGITAR DE NOVO
 		Usuario seleciona = null;
 		for(Usuario u: usuarios){
 			if(u.getCpf().equalsIgnoreCase(cpf)){ 
 				seleciona = u;
 				System.out.println("USUARIO" + u.getCpf());	
 			}
+		}
+		if(seleciona == null){
+			//EXCESSAO
 		}
 		return seleciona;
 	}	
@@ -119,7 +121,7 @@ public class Biblioteca {
 	}
 	
 	//Lista itens cadastrados no acervo
-	public void listaItemAcervo(){
+	public void listaItemAcervo(){// ten de listar itens disponiveis 
 		System.out.println("===== ITENS CADASTRADOS NO SISTEMA =====");
 		for(ItemAcervo i: itemDeAcervo){
 			System.out.println(i);
@@ -147,6 +149,23 @@ public class Biblioteca {
 		agora.add(Calendar.DAY_OF_MONTH, 3);	
 		Format formato = new SimpleDateFormat("dd/MM/yyyy");
 		return formato.format(agora.getTime());	
+	}
+
+
+	public Reserva buscarReserva(Usuario usuario2) {//LEMBRETE PARA EXCESSAO NAO ENCONTRADA NEHUMA RESERVA COM ESSE USUARIO
+		Reserva reservaBuscada = null; 
+		for(Reserva u: reservados){
+			if(usuario2.getCodUsuario() == u.user.getCodUsuario()){
+				reservaBuscada = u;
+				System.out.println("Voce reservou o item " + reservaBuscada.item.toString());
+			}
+		}
+		if(reservaBuscada == null){
+			System.out.println("Nenhuma reserva cadastrada");
+			//EXCESSAO NOVA AQUI
+			return null;
+		}
+		return reservaBuscada;
 	}
 
 }
