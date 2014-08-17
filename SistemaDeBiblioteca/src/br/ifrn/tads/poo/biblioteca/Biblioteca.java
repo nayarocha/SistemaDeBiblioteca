@@ -153,7 +153,7 @@ public class Biblioteca {
 	}
 
 
-	public Reserva buscarReserva(Usuario usuario2) {//LEMBRETE PARA EXCESSAO NAO ENCONTRADA NEHUMA RESERVA COM ESSE USUARIO
+	public Reserva buscarReserva(Usuario usuario2) throws reservaInexistenteException {//LEMBRETE PARA EXCESSAO NAO ENCONTRADA NEHUMA RESERVA COM ESSE USUARIO
 		Reserva reservaBuscada = null; 
 		for(Reserva u: reservados){
 			if(usuario2.getCodUsuario() == u.user.getCodUsuario()){
@@ -162,9 +162,7 @@ public class Biblioteca {
 			}
 		}
 		if(reservaBuscada == null){
-			System.out.println("Nenhuma reserva cadastrada");
-			//EXCESSAO NOVA AQUI
-			return null;
+			throw new reservaInexistenteException();			
 		}
 		return reservaBuscada;
 	}

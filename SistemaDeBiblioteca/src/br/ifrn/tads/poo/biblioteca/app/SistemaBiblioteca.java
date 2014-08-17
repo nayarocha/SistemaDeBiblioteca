@@ -14,6 +14,7 @@ import br.ifrn.tads.poo.biblioteca.CodigoInvalidoException;
 import br.ifrn.tads.poo.biblioteca.CpfInvalidoException;
 import br.ifrn.tads.poo.biblioteca.Locacao;
 import br.ifrn.tads.poo.biblioteca.Reserva;
+import br.ifrn.tads.poo.biblioteca.reservaInexistenteException;
 import br.ifrn.tads.poo.biblioteca.acervo.Apostila;
 import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.acervo.Livro;
@@ -51,22 +52,24 @@ public class SistemaBiblioteca {
 			System.out.println(e.getMessage());
 			System.out.println("Favor inserir cpf válido");
 			cpf = cpf1.nextLine();
+		}finally{
+			//Gerador de código automático para cada novo usuário
+			Random geraCod = new Random();		
+			int codUsuario = geraCod.nextInt(1000)*2; 	
+
+			//cria um novo usuário
+			novoUsuario = new Usuario(codUsuario, nome, endereco,cpf);
+			
+			//Insere o novo usuario no arraylist
+			biblioteca.cadastraUsuario(novoUsuario);
+			
+			//salva no banco
+			RegistrosBiblioteca.salvaNoBanco(nome, endereco,cpf);
+
+			System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
+			RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());		
 		}
-		//Gerador de código automático para cada novo usuário
-		Random geraCod = new Random();		
-		int codUsuario = geraCod.nextInt(1000)*2; 	
-
-		//cria um novo usuário
-		novoUsuario = new Usuario(codUsuario, nome, endereco,cpf);
 		
-		//Insere o novo usuario no arraylist
-		biblioteca.cadastraUsuario(novoUsuario);
-		
-		//salva no banco
-		RegistrosBiblioteca.salvaNoBanco(nome, endereco,cpf);
-
-		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
-		RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());		
 	}
 	
 	//LER USUARIOS CADASTRADOS DO ARQUIVO
@@ -341,7 +344,13 @@ public class SistemaBiblioteca {
 					String cpfUser1 = c.nextLine();
 					Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
 					
-					Reserva novaLocacao = biblioteca.buscarReserva(usuario2);
+					Reserva novaLocacao;
+					try {
+						novaLocacao = biblioteca.buscarReserva(usuario2);
+					} catch (reservaInexistenteException e) {
+						System.out.println(e.getMessage());
+						break;
+					}
 					biblioteca.cadastraEmprestimo(novaLocacao);
 					Locacao jaLocado = novaLocacao; 
 					

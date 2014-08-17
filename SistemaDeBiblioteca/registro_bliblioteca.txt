@@ -1364,3 +1364,69 @@ Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
 Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
 Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
 Novo usuario cadastrado		64 | Maria JOaquina | 
+Novo usuario cadastrado		1398 | Nayara Rocha | 
+Novo usuario cadastrado		1328 | Nirvana Dantas | 
+Novo usuario cadastrado		92 | Placido neto | 
+Novo usuario cadastrado		940 | Alejandro | 
+Novo usuario cadastrado		672 | Robson | 
+Novo usuario cadastrado		1996 | Suzyanne | 
+Novo usuario cadastrado		1472 | Taina | 
+Novo usuario cadastrado		1226 | SARA | 
+Novo usuario cadastrado		752 | Sinha benta | 
+Novo usuario cadastrado		1134 | Antonio Conselheiro | 
+Novo usuario cadastrado		1128 | ze colmeia | 
+Novo usuario cadastrado		498 | Machado de Assis | 
+Novo usuario cadastrado		1276 | auta de souza | 
+Novo usuario cadastrado		638 | aurina da silva | 
+Novo usuario cadastrado		574 | Douglas de Oliveira | 
+Novo usuario cadastrado		898 | Maria JOaquina | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		1462 | amanda gurgel | 
+Novo usuario cadastrado		1104 | Nayara Rocha | 
+Novo usuario cadastrado		1328 | Nirvana Dantas | 
+Novo usuario cadastrado		1328 | Placido neto | 
+Novo usuario cadastrado		798 | Alejandro | 
+Novo usuario cadastrado		552 | Robson | 
+Novo usuario cadastrado		1320 | Suzyanne | 
+Novo usuario cadastrado		372 | Taina | 
+Novo usuario cadastrado		1744 | SARA | 
+Novo usuario cadastrado		1512 | Sinha benta | 
+Novo usuario cadastrado		604 | Antonio Conselheiro | 
+Novo usuario cadastrado		494 | ze colmeia | 
+Novo usuario cadastrado		182 | Machado de Assis | 
+Novo usuario cadastrado		172 | auta de souza | 
+Novo usuario cadastrado		1072 | aurina da silva | 
+Novo usuario cadastrado		522 | Douglas de Oliveira | 
+Novo usuario cadastrado		240 | Maria JOaquina | 
+Novo usuario cadastrado		1746 | amanda gurgel | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
