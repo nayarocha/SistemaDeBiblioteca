@@ -1161,3 +1161,206 @@ Novo texto adicionado ao acervo	CODIGO: 1021||TEXTO - Regina case
 Novo texto adicionado ao acervo	CODIGO: 1022||TEXTO - Sdbrama Ajubuprava
 Novo texto adicionado ao acervo	CODIGO: 1023||TEXTO - Ana Maria da Silva
 Novo texto adicionado ao acervo	CODIGO: 1024||TEXTO - Josh Gobram
+Novo usuario cadastrado		1668 | Nayara Rocha | 
+Novo usuario cadastrado		1556 | Nirvana Dantas | 
+Novo usuario cadastrado		1820 | Placido neto | 
+Novo usuario cadastrado		804 | Alejandro | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo usuario cadastrado		1604 | Nayara Rocha | 
+Novo usuario cadastrado		778 | Nirvana Dantas | 
+Novo usuario cadastrado		940 | Placido neto | 
+Novo usuario cadastrado		1580 | Alejandro | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		902 | Miriam Bezerra | 
+Novo usuario cadastrado		232 | Nayara Rocha | 
+Novo usuario cadastrado		284 | Nirvana Dantas | 
+Novo usuario cadastrado		1832 | Placido neto | 
+Novo usuario cadastrado		478 | Alejandro | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		198 | mirim bezerra | 
+Novo usuario cadastrado		1986 | Nayara Rocha | 
+Novo usuario cadastrado		886 | Nirvana Dantas | 
+Novo usuario cadastrado		412 | Placido neto | 
+Novo usuario cadastrado		1054 | Alejandro | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		1440 | miriam | 
+Novo usuario cadastrado		1876 | Nayara Rocha | 
+Novo usuario cadastrado		824 | Nirvana Dantas | 
+Novo usuario cadastrado		58 | Placido neto | 
+Novo usuario cadastrado		62 | Alejandro | 
+Novo usuario cadastrado		1002 | Robson | 
+Novo usuario cadastrado		1954 | Suzyanne | 
+Novo usuario cadastrado		1150 | Taina | 
+Novo usuario cadastrado		1102 | SARA | 
+Novo usuario cadastrado		68 | Sinha benta | 
+Novo usuario cadastrado		1760 | Antonio Conselheiro | 
+Novo usuario cadastrado		820 | ze colmeia | 
+Novo usuario cadastrado		114 | Machado de Assis | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		1372 | auta de souza | 
+Novo usuario cadastrado		150 | Nayara Rocha | 
+Novo usuario cadastrado		418 | Nirvana Dantas | 
+Novo usuario cadastrado		1134 | Placido neto | 
+Novo usuario cadastrado		1952 | Alejandro | 
+Novo usuario cadastrado		596 | Robson | 
+Novo usuario cadastrado		1362 | Suzyanne | 
+Novo usuario cadastrado		338 | Taina | 
+Novo usuario cadastrado		1266 | SARA | 
+Novo usuario cadastrado		1228 | Sinha benta | 
+Novo usuario cadastrado		1274 | Antonio Conselheiro | 
+Novo usuario cadastrado		1160 | ze colmeia | 
+Novo usuario cadastrado		612 | Machado de Assis | 
+Novo usuario cadastrado		760 | auta de souza | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		1910 | aurina da silva | 
+Novo usuario cadastrado		908 | Nayara Rocha | 
+Novo usuario cadastrado		1084 | Nirvana Dantas | 
+Novo usuario cadastrado		382 | Placido neto | 
+Novo usuario cadastrado		1944 | Alejandro | 
+Novo usuario cadastrado		1834 | Robson | 
+Novo usuario cadastrado		278 | Suzyanne | 
+Novo usuario cadastrado		804 | Taina | 
+Novo usuario cadastrado		1364 | SARA | 
+Novo usuario cadastrado		356 | Sinha benta | 
+Novo usuario cadastrado		928 | Antonio Conselheiro | 
+Novo usuario cadastrado		622 | ze colmeia | 
+Novo usuario cadastrado		1986 | Machado de Assis | 
+Novo usuario cadastrado		1008 | auta de souza | 
+Novo usuario cadastrado		1444 | aurina da silva | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		74 | Douglas de Oliveira | 
+Novo usuario cadastrado		1302 | Nayara Rocha | 
+Novo usuario cadastrado		866 | Nirvana Dantas | 
+Novo usuario cadastrado		662 | Placido neto | 
+Novo usuario cadastrado		182 | Alejandro | 
+Novo usuario cadastrado		1096 | Robson | 
+Novo usuario cadastrado		356 | Suzyanne | 
+Novo usuario cadastrado		164 | Taina | 
+Novo usuario cadastrado		1742 | SARA | 
+Novo usuario cadastrado		1244 | Sinha benta | 
+Novo usuario cadastrado		1962 | Antonio Conselheiro | 
+Novo usuario cadastrado		1344 | ze colmeia | 
+Novo usuario cadastrado		266 | Machado de Assis | 
+Novo usuario cadastrado		1138 | auta de souza | 
+Novo usuario cadastrado		232 | aurina da silva | 
+Novo usuario cadastrado		234 | Douglas de Oliveira | 
+Novo livro cadastrado	CODIGO - 1000LIVRO - ﻿Frankenstein
+Novo livro cadastrado	CODIGO - 1001LIVRO - Song of Solomon
+Novo livro cadastrado	CODIGO - 1002LIVRO - Voando Sobre um Ninho de Cucos
+Novo livro cadastrado	CODIGO - 1003LIVRO - Por Quem os Sinos Dobram
+Novo livro cadastrado	CODIGO - 1004LIVRO - Matadouro 5
+Novo livro cadastrado	CODIGO - 1005LIVRO - Animal Farm
+Novo livro cadastrado	CODIGO - 1006LIVRO - O Deus das Moscas
+Novo livro cadastrado	CODIGO - 1007LIVRO - A Sangue Frio
+Novo livro cadastrado	CODIGO - 1008LIVRO - O Caderno Dourado
+Novo livro cadastrado	CODIGO - 1009LIVRO - Em Busca do Tempo Perdido
+Novo livro cadastrado	CODIGO - 1010LIVRO - À Beira do Abismo
+Novo livro cadastrado	CODIGO - 1011LIVRO - Enquanto Agonizo
+Novo livro cadastrado	CODIGO - 1012LIVRO - O Sol Também se Levanta
+Novo livro cadastrado	CODIGO - 1013LIVRO - Eu, Cláudio
+Novo livro cadastrado	CODIGO - 1014LIVRO - Bom Dia Sr Professor
+Novo livro cadastrado	CODIGO - 1015LIVRO - Relações perigosas
+Novo usuario cadastrado		64 | Maria JOaquina | 

@@ -36,7 +36,8 @@ public class Biblioteca {
 			
 	//Cadastra novo Usuário
 	public void cadastraUsuario(Usuario usuario){
-		usuarios.add(usuario);		
+		//checar se já existe o cpf em algum usuario
+		usuarios.add(usuario);
 	}
 		
 	//Cadastra novo emprestimo 
@@ -166,6 +167,14 @@ public class Biblioteca {
 			return null;
 		}
 		return reservaBuscada;
+	}
+
+	public void checaCpf(String cpf) throws CpfInvalidoException {
+		for(Usuario u: usuarios){
+			if(u.getCpf().equalsIgnoreCase(cpf)){ 
+				throw new CpfInvalidoException();
+			}
+		}
 	}
 
 }

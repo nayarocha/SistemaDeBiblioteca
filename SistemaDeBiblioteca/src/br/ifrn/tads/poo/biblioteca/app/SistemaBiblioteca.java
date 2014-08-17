@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 import br.ifrn.tads.poo.biblioteca.Biblioteca;
 import br.ifrn.tads.poo.biblioteca.CodigoInvalidoException;
+import br.ifrn.tads.poo.biblioteca.CpfInvalidoException;
 import br.ifrn.tads.poo.biblioteca.Locacao;
 import br.ifrn.tads.poo.biblioteca.Reserva;
 import br.ifrn.tads.poo.biblioteca.acervo.Apostila;
@@ -31,7 +32,7 @@ public class SistemaBiblioteca {
 	private static int escolha;
 	
 	//CADASTRAR USUARIOS
-	public static void addUsuario(){				
+	public static void addUsuario() {				
 		//ler nome
 		System.out.println("NOME COMPLETO: ");
 		nome1 = new Scanner(System.in);
@@ -44,12 +45,20 @@ public class SistemaBiblioteca {
 		System.out.println("CPF:  ");	
 		cpf1 = new Scanner(System.in);
 		String cpf = cpf1.nextLine();
+		try {
+			biblioteca.checaCpf(cpf);
+		} catch (CpfInvalidoException e) {
+			System.out.println(e.getMessage());
+			System.out.println("Favor inserir cpf válido");
+			cpf = cpf1.nextLine();
+		}
 		//Gerador de código automático para cada novo usuário
 		Random geraCod = new Random();		
 		int codUsuario = geraCod.nextInt(1000)*2; 	
 
 		//cria um novo usuário
 		novoUsuario = new Usuario(codUsuario, nome, endereco,cpf);
+		
 		//Insere o novo usuario no arraylist
 		biblioteca.cadastraUsuario(novoUsuario);
 		
@@ -61,7 +70,7 @@ public class SistemaBiblioteca {
 	}
 	
 	//LER USUARIOS CADASTRADOS DO ARQUIVO
-	public static void addUsuariosDoArquivo(){
+	public static void addUsuariosDoArquivo() throws CpfInvalidoException{
 		File arquivo = new File("arquivo_usuarios.txt");
 		try (FileReader freader = new FileReader(arquivo)){
 			BufferedReader br = new BufferedReader(freader);
@@ -282,7 +291,11 @@ public class SistemaBiblioteca {
 
 	
 	public static void main(String[] args) {
-		addUsuariosDoArquivo();
+		try {
+			addUsuariosDoArquivo();
+		} catch (CpfInvalidoException e) {
+			e.printStackTrace();
+		}
 		criarAcervo();
 		Scanner lerOpcao = new Scanner(System.in);
 		int opcao;
@@ -295,7 +308,7 @@ public class SistemaBiblioteca {
 
 			//Cadastrar usuario
 			case 1:
-				addUsuario();	
+				addUsuario();
 			break;
 
 			//listar usuários cadastrados
