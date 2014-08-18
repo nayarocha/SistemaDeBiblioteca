@@ -60,7 +60,8 @@ public class RegistrosBiblioteca {
 			escreve.newLine();
 			escreve.write(isbn);
 			escreve.newLine();
-			escreve.write(edicao);		
+			String ed = Integer.toString(edicao);
+			escreve.write(ed);		
 			escreve.close();
 			atualizaArquivo.close();
 		} catch (IOException e) {

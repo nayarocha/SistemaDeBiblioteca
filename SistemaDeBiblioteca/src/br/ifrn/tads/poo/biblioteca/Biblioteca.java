@@ -66,8 +66,18 @@ public class Biblioteca {
 		ItemAcervo escolha = null;
 		//VERIFICA SE O ITEM JA ESTA LOCADO
 		for(Locacao l: emprestimos){
-			if(l.item.getCodigoItem() == num)
+			if(l.item.getCodigoItem() == num){
+				System.out.println("O item "+ l.item.getCodigoItem() + "encontra-se locado.");
 				return null;
+			}
+		}
+		//verifica se o item ja esta reservado
+		for(Reserva r: reservados){
+			if(r.item.getCodigoItem() == num){
+				System.out.println("O item "+ r.item.getCodigoItem() + "encontra-se reservado.");
+				return null;
+			}
+				
 		}
 		
 		for(ItemAcervo i: itemDeAcervo){
@@ -83,7 +93,7 @@ public class Biblioteca {
 	}
 	
 	//Seleciona usuario a partir do CPF
-	public Usuario selecionaUsuario(String cpf){//LEMBRETE EXCESSAO CPF INVALIDO TRATAR PEDINDO P DIGITAR DE NOVO
+	public Usuario selecionaUsuario(String cpf){
 		Usuario seleciona = null;
 		for(Usuario u: usuarios){
 			if(u.getCpf().equalsIgnoreCase(cpf)){ 
@@ -91,9 +101,7 @@ public class Biblioteca {
 				System.out.println("USUARIO" + u.getCpf());	
 			}
 		}
-		if(seleciona == null){
-			//EXCESSAO
-		}
+		
 		return seleciona;
 	}	
 	
@@ -167,13 +175,23 @@ public class Biblioteca {
 		return reservaBuscada;
 	}
 
-	public void checaCpf(String cpf) throws CpfInvalidoException {
+	public void checaCpfRepetido(String cpf) throws CpfInvalidoException {
 		for(Usuario u: usuarios){
 			if(u.getCpf().equalsIgnoreCase(cpf)){ 
 				throw new CpfInvalidoException();
 			}
 		}
 	}
+
+	public void checaCpfCadastrado(String cpfUser) throws CpfInvalidoException {
+		for(Usuario u: usuarios){
+			if(!(u.getCpf().equalsIgnoreCase(cpfUser))){ 
+				throw new CpfInvalidoException();
+			}
+		}
+	}
+
+	
 
 }
 

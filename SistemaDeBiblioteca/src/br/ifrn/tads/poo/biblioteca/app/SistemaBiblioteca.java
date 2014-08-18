@@ -47,7 +47,7 @@ public class SistemaBiblioteca {
 		cpf1 = new Scanner(System.in);
 		String cpf = cpf1.nextLine();
 		try {
-			biblioteca.checaCpf(cpf);
+			biblioteca.checaCpfRepetido(cpf);
 		} catch (CpfInvalidoException e) {
 			System.out.println(e.getMessage());
 			System.out.println("Favor inserir cpf válido");
@@ -237,6 +237,13 @@ public class SistemaBiblioteca {
 		System.out.println("Insira  CPF do usuario");
 		Scanner a = new Scanner(System.in);
 		String cpfUser = a.nextLine();
+		try {
+			biblioteca.checaCpfCadastrado(cpfUser);
+		} catch (CpfInvalidoException e1) {
+			System.out.println(e1.getMessage());
+			System.out.println("Favor inserir cpf válido");
+			cpfUser = a.nextLine();
+		}
 		Usuario usuario = null;	
 		usuario = biblioteca.selecionaUsuario(cpfUser);	
 		
@@ -258,7 +265,7 @@ public class SistemaBiblioteca {
 			biblioteca.cadastraEmprestimo(locar);
 			System.out.println(locar.toString());
 			
-			Arquivo.salvar("Locacao >> ", locar.toString());
+			RegistrosBiblioteca.salvar("Locacao >> ", locar.toString());
 		}else{
 			System.out.println("item alugado");
 		}	
@@ -269,8 +276,14 @@ public class SistemaBiblioteca {
 		System.out.println("Insira  CPF do usuario");
 		Scanner c = new Scanner(System.in);
 		String cpfUser1 = c.nextLine();
-		Usuario usuario2 = null;	
-		usuario2 = biblioteca.selecionaUsuario(cpfUser1);
+		try {
+			biblioteca.checaCpfCadastrado(cpfUser1);
+		} catch (CpfInvalidoException e1) {
+			System.out.println(e1.getMessage());
+			System.out.println("Favor inserir cpf válido");
+			cpfUser1 = c.nextLine();
+		}
+		Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
 			
 		System.out.println("insira codigo do livro");
 		Scanner codReserva = new Scanner(System.in);
@@ -278,6 +291,8 @@ public class SistemaBiblioteca {
 		
 		ItemAcervo itemReserva = null;
 		try {
+			//busca nos reservados e locados o item depois no acervo 
+			//para saber se o item existe realmente
 			itemReserva  = biblioteca.escolherItemAcervo(codigoReserva);
 		} catch (CodigoInvalidoException e) {
 			e.printStackTrace();
@@ -349,6 +364,8 @@ public class SistemaBiblioteca {
 						novaLocacao = biblioteca.buscarReserva(usuario2);
 					} catch (reservaInexistenteException e) {
 						System.out.println(e.getMessage());
+						System.out.println("Pressione qualquer tecla para continuar");
+						String go = c.nextLine();
 						break;
 					}
 					biblioteca.cadastraEmprestimo(novaLocacao);
