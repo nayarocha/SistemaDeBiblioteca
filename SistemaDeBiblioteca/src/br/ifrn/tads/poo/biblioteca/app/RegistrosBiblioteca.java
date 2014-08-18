@@ -46,6 +46,31 @@ public class RegistrosBiblioteca {
 		}
 	}
 	
+	//Registra  novos empréstimos
+	public static void salvaNovoEmprestimo(String nome, String nomeItem, String datEmp, String datDev){
+		File arquivoEmprestimos = new File("arquivo_emprestimos.txt");
+		try {		
+			FileWriter atualizaArquivo = new FileWriter(arquivoEmprestimos, true);
+			BufferedWriter escreve = new BufferedWriter(atualizaArquivo);
+			escreve.newLine();
+			escreve.write(nome);
+			escreve.newLine();
+			escreve.write(nomeItem);
+			escreve.newLine();
+			//escreve.write(cod);
+			//escreve.newLine();
+			escreve.write(datEmp);
+			escreve.newLine();
+			escreve.write(datDev);
+			escreve.write(linha);
+			escreve.close();
+			atualizaArquivo.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 	//Adiciona novo livro no arquivo_livros.txt
 	public static void salvaLivroNoBanco(String title, String autor,
 			String isbn, int edicao) {
@@ -60,8 +85,7 @@ public class RegistrosBiblioteca {
 			escreve.newLine();
 			escreve.write(isbn);
 			escreve.newLine();
-			String ed = Integer.toString(edicao);
-			escreve.write(ed);		
+			escreve.write(edicao);		
 			escreve.close();
 			atualizaArquivo.close();
 		} catch (IOException e) {
@@ -100,4 +124,7 @@ public class RegistrosBiblioteca {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	
 }

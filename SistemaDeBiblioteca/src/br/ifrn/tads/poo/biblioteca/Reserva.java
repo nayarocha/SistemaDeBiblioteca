@@ -10,17 +10,26 @@ import br.ifrn.tads.poo.biblioteca.acervo.ItemAcervo;
 import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 
 public class Reserva extends Locacao{
-	private Date dataReserva =  null;
-	private String dataEspira= null;
 	
-
-	public Reserva(Usuario usuario, ItemAcervo item) {
+	
+	
+	public Reserva(Usuario usuario, ItemAcervo item, String dataDevolucao) {
+		super(usuario, item, dataDevolucao);
 		this.dataReserva = new Date();
 		this.setDataEspira();
 		super.user = usuario;
 		super.item = item;
 	}
 
+
+	private Date dataReserva =  null;
+	private String dataEspira= null;
+	
+
+	/*public Reserva(Usuario usuario, ItemAcervo item){
+		
+	}*/
+	
 	public void setDataEspira(){
 		Calendar agora = Calendar.getInstance();
 		agora.add(Calendar.DAY_OF_MONTH, 3);	
@@ -37,6 +46,18 @@ public class Reserva extends Locacao{
 		return "Item reservado: " + item + " || " + "Usuário: " + this.user + " || "
 				+ "Data da reserva: " +df.format(c.getTime()) + " || " +
 				"Data que espira a reserva: " + this.dataEspira;
+	}
+
+
+	public void setDataEmprestimo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setDataDevolucao() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

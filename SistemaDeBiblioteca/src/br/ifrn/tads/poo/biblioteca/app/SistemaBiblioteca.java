@@ -1,10 +1,16 @@
 package br.ifrn.tads.poo.biblioteca.app;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
@@ -24,16 +30,20 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public class SistemaBiblioteca {
 	//criando biblioteca
 	static Biblioteca biblioteca = new Biblioteca();
-
+	
 	private static Scanner nome1;
 	private static Scanner endereco1;
 	private static Scanner cpf1;
 	private static Scanner cod1;
 	private static Usuario novoUsuario;
 	private static int escolha;
+
+	private static BufferedReader br;
+
+	private static ItemAcervo item;
 	
 	//CADASTRAR USUARIOS
-	public static void addUsuario() {				
+	public static void addUsuario(){				
 		//ler nome
 		System.out.println("NOME COMPLETO: ");
 		nome1 = new Scanner(System.in);
@@ -46,34 +56,24 @@ public class SistemaBiblioteca {
 		System.out.println("CPF:  ");	
 		cpf1 = new Scanner(System.in);
 		String cpf = cpf1.nextLine();
-		try {
-			biblioteca.checaCpfRepetido(cpf);
-		} catch (CpfInvalidoException e) {
-			System.out.println(e.getMessage());
-			System.out.println("Favor inserir cpf válido");
-			cpf = cpf1.nextLine();
-		}finally{
-			//Gerador de código automático para cada novo usuário
-			Random geraCod = new Random();		
-			int codUsuario = geraCod.nextInt(1000)*2; 	
+		//Gerador de código automático para cada novo usuário
+		Random geraCod = new Random();		
+		int codUsuario = geraCod.nextInt(1000)*2; 	
 
-			//cria um novo usuário
-			novoUsuario = new Usuario(codUsuario, nome, endereco,cpf);
-			
-			//Insere o novo usuario no arraylist
-			biblioteca.cadastraUsuario(novoUsuario);
-			
-			//salva no banco
-			RegistrosBiblioteca.salvaNoBanco(nome, endereco,cpf);
-
-			System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
-			RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());		
-		}
+		//cria um novo usuário
+		novoUsuario = new Usuario(codUsuario, nome, endereco,cpf);
+		//Insere o novo usuario no arraylist
+		biblioteca.cadastraUsuario(novoUsuario);
 		
+		//salva no banco
+		RegistrosBiblioteca.salvaNoBanco(nome, endereco,cpf);
+
+		System.out.println("COdigo gerado para usuario: " + novoUsuario.getCodUsuario()); // testando código automático
+		RegistrosBiblioteca.salvar("Novo usuario cadastrado		", novoUsuario.toString());		
 	}
 	
 	//LER USUARIOS CADASTRADOS DO ARQUIVO
-	public static void addUsuariosDoArquivo() throws CpfInvalidoException{
+	public static void addUsuariosDoArquivo(){
 		File arquivo = new File("arquivo_usuarios.txt");
 		try (FileReader freader = new FileReader(arquivo)){
 			BufferedReader br = new BufferedReader(freader);
@@ -207,8 +207,8 @@ public class SistemaBiblioteca {
 		RegistrosBiblioteca.salvar("Novo texto adicionado ao acervo	", texto.toString());
 	}
 		
-	//CARREGA ACERVO DO SISTEMA
-	public static void criarAcervo(){
+	//CARREGA ARQUIVO_LIVROS.TXT
+	public static void carregaLivros(){
 		File arquivo = new File("arquivo_livros.txt");
 		try (FileReader freader = new FileReader(arquivo)){
 			BufferedReader br = new BufferedReader(freader);
@@ -223,7 +223,8 @@ public class SistemaBiblioteca {
 				
 				ItemAcervo livro = new Livro(title,autor,isbn,edicao); 
 				biblioteca.cadastraItem(livro);				
-				RegistrosBiblioteca.salvar("Novo livro cadastrado	", livro.toString());			
+				RegistrosBiblioteca.salvar("Novo livro cadastrado	", livro.toString());	
+				
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -232,18 +233,12 @@ public class SistemaBiblioteca {
 		}
 	}
 	
+	
 	//ALUGAR ITEM DO ACERVO
 	public static void alugarItem(){
 		System.out.println("Insira  CPF do usuario");
 		Scanner a = new Scanner(System.in);
 		String cpfUser = a.nextLine();
-		try {
-			biblioteca.checaCpfCadastrado(cpfUser);
-		} catch (CpfInvalidoException e1) {
-			System.out.println(e1.getMessage());
-			System.out.println("Favor inserir cpf válido");
-			cpfUser = a.nextLine();
-		}
 		Usuario usuario = null;	
 		usuario = biblioteca.selecionaUsuario(cpfUser);	
 		
@@ -259,17 +254,56 @@ public class SistemaBiblioteca {
 		}
 		
 		if(item != null){
-			Date dataEmprestimo = biblioteca.dataEmprestimo();
+			
+			String dataEmprestimo = biblioteca.dataEmprestimo();
 			String dataDevolucao = biblioteca.dataDevolucao();
 			Locacao locar = new Locacao(usuario, item, dataEmprestimo, dataDevolucao);
 			biblioteca.cadastraEmprestimo(locar);
 			System.out.println(locar.toString());
 			
-			RegistrosBiblioteca.salvar("Locacao >> ", locar.toString());
+			String nome = usuario.getNome();
+			String nomeItem = item.toString();
+			
+			RegistrosBiblioteca.salvaNovoEmprestimo(nome, nomeItem,dataEmprestimo, dataDevolucao);
 		}else{
 			System.out.println("item alugado");
 		}	
 	}
+	
+	//ALUGAR ITEM RESERVADO
+	public static void alugarItemReservado(){
+		System.out.println("Insira  CPF do usuario");
+		Scanner c = new Scanner(System.in);
+		String cpfUser1 = c.nextLine();
+		Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
+		
+		Reserva novaLocacao = null;
+		try {
+			novaLocacao = biblioteca.buscarReserva(usuario2);
+		} catch (reservaInexistenteException e) {
+			System.out.println(e.getMessage());
+			System.out.println("Pressione qualquer tecla para continuar");
+			String go = c.nextLine();
+			
+		}
+		biblioteca.cadastraEmprestimo(novaLocacao);
+		Locacao jaLocado = novaLocacao; 
+		
+		System.out.println(jaLocado.toString());
+	}
+	
+	//DEVOLVER ITEM EMPRESTADO
+	public static void devolucao(){
+		System.out.println("insira codigo do item para devolucao");
+		Scanner cod = new Scanner(System.in);
+		int codigo = cod.nextInt();
+		Locacao devolver = null;
+		
+		devolver = biblioteca.devolucaoItemAcervo(codigo);
+		biblioteca.cadastraDevolucao(devolver);
+		
+	}
+
 	
 	//RESERVA ITEM DO ACERVO
 	public static void reservar() {	
@@ -277,44 +311,45 @@ public class SistemaBiblioteca {
 		Scanner c = new Scanner(System.in);
 		String cpfUser1 = c.nextLine();
 		try {
-			biblioteca.checaCpfCadastrado(cpfUser1);
+			biblioteca.verificaCpfCadastrado(cpfUser1);		
 		} catch (CpfInvalidoException e1) {
 			System.out.println(e1.getMessage());
 			System.out.println("Favor inserir cpf válido");
 			cpfUser1 = c.nextLine();
 		}
 		Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
-			
+				
 		System.out.println("insira codigo do livro");
 		Scanner codReserva = new Scanner(System.in);
 		int codigoReserva = codReserva .nextInt();
 		
+		System.out.println("Insira a data de reserva:");
+		Scanner d = new Scanner(System.in);
+		String data = d.nextLine();
+		
 		ItemAcervo itemReserva = null;
 		try {
-			//busca nos reservados e locados o item depois no acervo 
-			//para saber se o item existe realmente
+				
 			itemReserva  = biblioteca.escolherItemAcervo(codigoReserva);
 		} catch (CodigoInvalidoException e) {
-			e.printStackTrace();
+				e.printStackTrace();
 		}
-	
+		
 		if(itemReserva != null){
-			Reserva reservaItem = new Reserva(usuario2, itemReserva);
+			Reserva reservaItem = new Reserva(usuario2, itemReserva, data);
 			biblioteca.cadastraReserva(reservaItem);
 			RegistrosBiblioteca.salvar("", reservaItem.toString());
 		}else{
 			System.out.println("Impossível reservar este item");
 		}
 	}
-
 	
 	public static void main(String[] args) {
-		try {
-			addUsuariosDoArquivo();
-		} catch (CpfInvalidoException e) {
-			e.printStackTrace();
-		}
-		criarAcervo();
+		addUsuariosDoArquivo();
+		
+		carregaLivros();
+		
+		@SuppressWarnings("resource")
 		Scanner lerOpcao = new Scanner(System.in);
 		int opcao;
 		int fim = -1;
@@ -322,11 +357,12 @@ public class SistemaBiblioteca {
 		do{
 			Menu.menuPrincipal();
 			opcao = lerOpcao.nextInt();
+			
 			switch(opcao){
 
 			//Cadastrar usuario
 			case 1:
-				addUsuario();
+				addUsuario();	
 			break;
 
 			//listar usuários cadastrados
@@ -345,42 +381,14 @@ public class SistemaBiblioteca {
 			break;
 			
 			//Fazer empréstimo
-			case 5:
-				Menu.aluguel();
-				Scanner c1 = new Scanner(System.in);
-				int ok = c1.nextInt();
-				if(ok == 1){//ALUGUEL DIRETO
-					biblioteca.listaItemAcervo();//ten de listar itens disponiveis 
-					alugarItem();
-				}else if(ok == 2){//ALUGUEL POR RESERVA
-					
-					System.out.println("Insira  CPF do usuario");
-					Scanner c = new Scanner(System.in);
-					String cpfUser1 = c.nextLine();
-					Usuario usuario2 = biblioteca.selecionaUsuario(cpfUser1);
-					
-					Reserva novaLocacao;
-					try {
-						novaLocacao = biblioteca.buscarReserva(usuario2);
-					} catch (reservaInexistenteException e) {
-						System.out.println(e.getMessage());
-						System.out.println("Pressione qualquer tecla para continuar");
-						String go = c.nextLine();
-						break;
-					}
-					biblioteca.cadastraEmprestimo(novaLocacao);
-					Locacao jaLocado = novaLocacao; 
-					
-					System.out.println(jaLocado.toString());		//o tostring ta chamando o da reserva
-					Arquivo.salvar("Locacao >> ", jaLocado.toString());
-				}else//volta ao menu
-					break;
-				
+			case 5:			
+				biblioteca.listaItemAcervo();
+				alugarItem();
 			break;
 			
 			//Listar itens alugados
 			case 6:
-				
+				biblioteca.listaEmprestimos();
 			break;	
 			
 			//Reservar item do acervo
@@ -391,8 +399,30 @@ public class SistemaBiblioteca {
 			
 			//Listar itens reservados
 			case 8:	
-				
+				biblioteca.listaReservados();
+			break;		
+			
+			//Devolver item alugado
+			case 9:		
+				devolucao();
+			
 			break;
+			
+			//Alugar item reservado
+			case 10:	
+				alugarItemReservado();				
+			break;
+			
+			case 11:	
+				System.out.println("Insira cpf para remover usuario");
+				Scanner lercpf = new Scanner(System.in);
+				String cpf = lercpf.nextLine();
+			
+				Usuario user = biblioteca.selecionaUsuario(cpf);
+				System.out.println(user);
+				System.out.println(biblioteca.removeUsuario(user));
+			break;
+			
 			
 			}
 		}while(fim != 0);

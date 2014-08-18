@@ -22,10 +22,10 @@ import br.ifrn.tads.poo.biblioteca.usuario.Usuario;
 public class Biblioteca {
 	private String nomeBiblioteca;	
 	
-	private ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
-	private ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
-	private ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
-	private ArrayList<Reserva> reservados = new ArrayList <Reserva>();
+	ArrayList <Usuario> usuarios = new ArrayList <Usuario>();
+	ArrayList<ItemAcervo> itemDeAcervo = new ArrayList <ItemAcervo>();
+	ArrayList<Locacao> emprestimos = new ArrayList <Locacao>();
+	ArrayList<Reserva> reservados = new ArrayList <Reserva>();
 	
 	public Biblioteca(){}
 	
@@ -36,8 +36,7 @@ public class Biblioteca {
 			
 	//Cadastra novo Usuário
 	public void cadastraUsuario(Usuario usuario){
-		//checar se já existe o cpf em algum usuario
-		usuarios.add(usuario);
+		usuarios.add(usuario);		
 	}
 		
 	//Cadastra novo emprestimo 
@@ -49,9 +48,9 @@ public class Biblioteca {
 	//Cadastra nova reserva
 	public void cadastraReserva(Reserva reserva){
 		reservados.add(reserva);
-		System.out.println();
+		System.out.println("Reserva efetuada com sucesso");
 	}
-				
+	
 	//Cadastra emprestimo de um item reservado
 	public void cadastraEmprestimo(Reserva reserva){	
 		reserva.setDataEmprestimo();
@@ -60,24 +59,42 @@ public class Biblioteca {
 		reservados.remove(reserva);
 		System.out.println("Emprestimo feito com sucesso");	
 	}
+	
+	//Cadastra nova devolucao
+	public void cadastraDevolucao(Locacao locacao){
+		emprestimos.remove(locacao);
+		System.out.println("Devolucao feita com sucesso");
+	}	
+	
+	
+	//seleciona item para devolver
+	public Locacao devolucaoItemAcervo(int num){
+		Locacao escolha = null;
+		
+		for(Locacao l: emprestimos){
+			if(l.item.getCodigoItem() == num){
+				escolha = l;
+			}
+
+		}
+		return escolha;	
+	}
 		
 	//Seleciona item de acervo para alugar
 	public ItemAcervo escolherItemAcervo(int num) throws CodigoInvalidoException{
 		ItemAcervo escolha = null;
 		//VERIFICA SE O ITEM JA ESTA LOCADO
 		for(Locacao l: emprestimos){
-			if(l.item.getCodigoItem() == num){
-				System.out.println("O item "+ l.item.getCodigoItem() + "encontra-se locado.");
+			if(l.item.getCodigoItem() == num)
 				return null;
-			}
 		}
+		
 		//verifica se o item ja esta reservado
 		for(Reserva r: reservados){
 			if(r.item.getCodigoItem() == num){
 				System.out.println("O item "+ r.item.getCodigoItem() + "encontra-se reservado.");
 				return null;
-			}
-				
+			}				
 		}
 		
 		for(ItemAcervo i: itemDeAcervo){
@@ -98,10 +115,9 @@ public class Biblioteca {
 		for(Usuario u: usuarios){
 			if(u.getCpf().equalsIgnoreCase(cpf)){ 
 				seleciona = u;
-				System.out.println("USUARIO" + u.getCpf());	
+				System.out.println("USUARIO" + u.getNome());	
 			}
 		}
-		
 		return seleciona;
 	}	
 	
@@ -130,38 +146,15 @@ public class Biblioteca {
 	}
 	
 	//Lista itens cadastrados no acervo
-	public void listaItemAcervo(){// ten de listar itens disponiveis 
+	public void listaItemAcervo(){
 		System.out.println("===== ITENS CADASTRADOS NO SISTEMA =====");
 		for(ItemAcervo i: itemDeAcervo){
 			System.out.println(i);
 		}
 	}
 	
-	//Data de emprestimo 
-	public Date dataEmprestimo(){
-		Date dataEmprestimo = new Date();
-		return dataEmprestimo;
-	}
-	
-	//Data de devolucao
-	public String dataDevolucao(){
-		Calendar agora = Calendar.getInstance();
-		agora.add(Calendar.DAY_OF_MONTH, 20);	
-		Format formato = new SimpleDateFormat("dd/MM/yyyy");
-		System.out.println();
-		return formato.format(agora.getTime());	
-	}
-		
-	//Data da reserva 
-	public String dataEspira(){
-		Calendar agora = Calendar.getInstance();
-		agora.add(Calendar.DAY_OF_MONTH, 3);	
-		Format formato = new SimpleDateFormat("dd/MM/yyyy");
-		return formato.format(agora.getTime());	
-	}
-
-
-	public Reserva buscarReserva(Usuario usuario2) throws reservaInexistenteException {//LEMBRETE PARA EXCESSAO NAO ENCONTRADA NEHUMA RESERVA COM ESSE USUARIO
+	//Buscar reserva
+	public Reserva buscarReserva(Usuario usuario2) throws reservaInexistenteException {
 		Reserva reservaBuscada = null; 
 		for(Reserva u: reservados){
 			if(usuario2.getCodUsuario() == u.user.getCodUsuario()){
@@ -174,8 +167,9 @@ public class Biblioteca {
 		}
 		return reservaBuscada;
 	}
-
-	public void checaCpfRepetido(String cpf) throws CpfInvalidoException {
+	
+	
+	public void verificaCpfRepetido(String cpf) throws CpfInvalidoException {
 		for(Usuario u: usuarios){
 			if(u.getCpf().equalsIgnoreCase(cpf)){ 
 				throw new CpfInvalidoException();
@@ -183,16 +177,52 @@ public class Biblioteca {
 		}
 	}
 
-	public void checaCpfCadastrado(String cpfUser) throws CpfInvalidoException {
+	
+	public void verificaCpfCadastrado(String cpfUser) throws CpfInvalidoException {
 		for(Usuario u: usuarios){
 			if(!(u.getCpf().equalsIgnoreCase(cpfUser))){ 
 				throw new CpfInvalidoException();
 			}
 		}
 	}
+	
+	
+	public String dataEmprestimo(){
+		Calendar agora = Calendar.getInstance();
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+		return formato.format(agora.getTime());	
+	}
+	
+	//Data de devolucao
+	public String dataDevolucao(){
+		Calendar agora = Calendar.getInstance();
+		agora.add(Calendar.DAY_OF_MONTH, 20);	
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+		return formato.format(agora.getTime());	
+	}
+		
+	
+	//Data da reserva 
+	public String dataEspira(){
+		Calendar agora = Calendar.getInstance();
+		agora.add(Calendar.DAY_OF_MONTH, 3);	
+		Format formato = new SimpleDateFormat("dd/MM/yyyy");
+		return formato.format(agora.getTime());	
+	}
 
 	
-
+	
+	public String removeUsuario(Usuario usuario){
+		usuarios.remove(usuario);
+		return "Usuario removido com sucesso";	
+	}
+	
+	public String removeItem(ItemAcervo item){
+		itemDeAcervo.remove(item);
+		
+		return "Item removido com sucesso";
+		
+	}
 }
 
 

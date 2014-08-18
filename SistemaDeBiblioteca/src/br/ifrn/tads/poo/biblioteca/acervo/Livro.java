@@ -21,7 +21,8 @@ public class Livro extends ItemAcervo {
 	
 	@Override
 	public String toString() {
-		return  "CODIGO - "+ this.codigoItem + "LIVRO - " + this.titulo;
+		// TODO Auto-generated method stub
+		return  "CODIGO - "+ this.codigoItem + "||" + "LIVRO - " + this.titulo;
 	}
 
 	
